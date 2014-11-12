@@ -512,7 +512,9 @@ hr {
 
 
 /* UI three */
-.ui-3 { margin: 100px 0; }
+.ui-3 { 
+    margin: 5px 0; 
+}
 .ui-3 .color-block ul { text-align: center; }
 .ui-3 .color-block ul li {
 	display: block;
