@@ -1,4 +1,0 @@
-PawsWebsiteResponsive
-=====================
-
-Patwoodwardlawoffice.com redesigned
