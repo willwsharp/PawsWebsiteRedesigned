@@ -1,0 +1,19 @@
+{
+  "name": "pawswebsiteresponsive",
+  "version": "1.0.0",
+  "description": "Responsive website for PAWs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willwsharp/PawsWebsiteResponsive.git"
+  },
+  "author": "Will Sharp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willwsharp/PawsWebsiteResponsive/issues"
+  },
+  "homepage": "https://github.com/willwsharp/PawsWebsiteResponsive#readme"
+}
