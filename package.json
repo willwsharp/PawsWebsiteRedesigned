@@ -1,19 +1,48 @@
 {
-  "name": "pawswebsiteresponsive",
+  "name": "pawswebsiteredesigned",
   "version": "1.0.0",
   "description": "Responsive website for PAWs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willwsharp/PawsWebsiteResponsive.git"
+    "url": "git+https://github.com/willwsharp/PawsWebsiteRedesigned.git"
   },
   "author": "Will Sharp",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/willwsharp/PawsWebsiteResponsive/issues"
+    "url": "https://github.com/willwsharp/PawsWebsiteRedesigned/issues"
   },
-  "homepage": "https://github.com/willwsharp/PawsWebsiteResponsive#readme"
+  "homepage": "https://github.com/willwsharp/PawsWebsiteRedesigned#readme",
+
+  "dependencies": {
+    "@angular/common": "~2.0.2",
+    "@angular/compiler": "~2.0.2",
+    "@angular/core": "~2.0.2",
+    "@angular/forms": "~2.0.2",
+    "@angular/http": "~2.0.2",
+    "@angular/platform-browser": "~2.0.2",
+    "@angular/platform-browser-dynamic": "~2.0.2",
+    "@angular/router": "~3.0.2",
+    "@angular/upgrade": "~2.0.2",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
+  }
 }
+
