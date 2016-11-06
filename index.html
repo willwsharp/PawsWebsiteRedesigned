@@ -8,13 +8,25 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Law Office of Patricia A. Woodward</title>
 
+  <!-- Polyfill(s) for older browsers -->
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+  
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
+
+
+  <script src="systemjs.config.js"></script>
+  <script>
+      System.import('app').catch(function(err){ console.error(err); });
+  </script>
 </head>
 
 <body>
   <header id="header">
-    <base-parallax-display></base-parallax-display>
+    <panel-list>Loading...</panel-list>
     <!--<div class="content">
       <div class="logo"><a href="">Parallax</a>
         <nav id="nav">

@@ -9,29 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var http_1 = require('@angular/http');
-var panel_list_component_1 = require('./panel-list/panel-list.component');
-var panel_component_1 = require('./panel/panel.component');
-var AppModule = (function () {
-    function AppModule() {
+var PanelList = (function () {
+    function PanelList() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                http_1.HttpModule,
-            ],
-            declarations: [
-                panel_list_component_1.PanelList,
-                panel_component_1.Panel
-            ],
-            providers: [],
-            bootstrap: [panel_list_component_1.PanelList],
+    PanelList = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'panel-list',
+            template: "\n        <panel \n            [slave]=\"'I am the master!'\">\n        </panel>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], PanelList);
+    return PanelList;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.PanelList = PanelList;
+//# sourceMappingURL=panel-list.component.js.map

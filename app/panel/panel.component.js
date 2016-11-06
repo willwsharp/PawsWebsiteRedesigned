@@ -9,19 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var BaseParallaxDisplay = (function () {
-    function BaseParallaxDisplay() {
+var Panel = (function () {
+    function Panel() {
     }
-    BaseParallaxDisplay.prototype.ngOnInit = function () { };
-    BaseParallaxDisplay = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], Panel.prototype, "slave", void 0);
+    Panel = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'selector',
-            templateUrl: 'feature.component.html'
+            selector: 'panel',
+            templateUrl: 'panel.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], BaseParallaxDisplay);
-    return BaseParallaxDisplay;
+    ], Panel);
+    return Panel;
 }());
-exports.BaseParallaxDisplay = BaseParallaxDisplay;
-//# sourceMappingURL=base-parallax-display.component.js.map
+exports.Panel = Panel;
+//# sourceMappingURL=panel.component.js.map

@@ -2,9 +2,8 @@
   "name": "pawswebsiteredesigned",
   "version": "1.0.0",
   "description": "Responsive website for PAWs",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w"

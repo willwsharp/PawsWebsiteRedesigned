@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { BaseParallaxDisplay } from './ParallaxDisplay/base-parallax-display.component';
+import { PanelList } from './panel-list/panel-list.component';
+import { Panel } from './panel/panel.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,    
     ],
-    declarations: [BaseParallaxDisplay],
+    declarations: [
+        PanelList,
+        Panel
+    ],
     providers: [/* TODO: Providers go here */],
-    bootstrap: [BaseParallaxDisplay],
+    bootstrap: [PanelList],
 })
 export class AppModule { }
