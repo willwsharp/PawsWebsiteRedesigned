@@ -12,11 +12,16 @@ var core_1 = require('@angular/core');
 var PanelList = (function () {
     function PanelList() {
     }
+    PanelList.prototype.ngOnInit = function () {
+        //This is called after the component is loaded,
+        //it is a global function found in scrolling-nav.js
+        initSmoothScroll();
+    };
     PanelList = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'panel-list',
-            template: "\n        <panel \n            [slave]=\"'I am the master!'\">\n        </panel>\n    "
+            templateUrl: 'panel-list.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], PanelList);

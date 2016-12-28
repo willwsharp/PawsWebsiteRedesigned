@@ -9,18 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var FeatureComponent = (function () {
-    function FeatureComponent() {
+var NavigationBar = (function () {
+    function NavigationBar() {
     }
-    FeatureComponent = __decorate([
+    NavigationBar = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'nav-bar',
             templateUrl: 'nav-bar.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], FeatureComponent);
-    return FeatureComponent;
+    ], NavigationBar);
+    return NavigationBar;
 }());
-exports.FeatureComponent = FeatureComponent;
+exports.NavigationBar = NavigationBar;
 //# sourceMappingURL=nav-bar.component.js.map

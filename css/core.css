@@ -1,0 +1,50 @@
+/*Core CSS */
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.panel-img-container {
+    height: 100%;
+    width: 100%;
+}
+
+.panel {
+    height: 70%;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#top{
+    background: url('../images/top.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100%;
+}
+
+#float-navbar-right {
+    float: right;
+}
+
+.paws-logo {
+    font-size: 26px;
+    text-align: center;
+    height: 100%;
+    display: inline-block;
+    padding: 3px;
+}
+
+.full-name {
+    margin: 0 0 -3px;
+    color: black;
+}
+
+.full-title {
+    font-size: 16px;
+    color: black;
+}

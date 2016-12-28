@@ -9,95 +9,47 @@
   <title>Law Office of Patricia A. Woodward</title>
 
   <!-- Polyfill(s) for older browsers -->
-	<script src="node_modules/core-js/client/shim.min.js"></script>
-	<script src="node_modules/zone.js/dist/zone.js"></script>
-	<script src="node_modules/reflect-metadata/Reflect.js"></script>
-	<script src="node_modules/systemjs/dist/system.src.js"></script>
-  
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
 
+  <!-- Open Sans from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href="css/core.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
 
   <script src="systemjs.config.js"></script>
   <script>
-      System.import('app').catch(function(err){ console.error(err); });
+    System.import('app').catch(function (err) { console.error(err); });
   </script>
 </head>
 
-<body>
-  <header id="header">
-    <panel-list>Loading...</panel-list>
-    <!--<div class="content">
-      <div class="logo"><a href="">Parallax</a>
-        <nav id="nav">
-          <ul>
-            <li><a href="#panel1" class="active" title="Next Section">Home</a></li>
-            <li><a href="#panel2" title="Next Section">About Patricia</a></li>
-            <li><a href="#panel3" title="Next Section">Services</a></li>
-            <li><a href="#panel4" title="Next Section">Resources</a></li>
-            <li><a href="#panel5" title="Next Section">General Information</a></li>
-            <li><a href="#panel6" title="Next Section">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div id="slide1">
-        <div class="content">
-          <div id="christmas_tree"></div>
-          <div id="snowflakes1"></div>
-          <div id="snowflakes2"></div>
-          <h2>Merry</h2>
-          <h1>Christmas</h1>
-          <div id="divider"></div>
-          <h3>Happy New Year</h3>
-          <div id="ribbon"></div>
-          <div id="new_year"></div>
-        </div>
-      </div>
-      <div id="slide2">
-        <div class="content">
-          <div class="quotes_container">
-            <h3 class="quotes">“Then the Grinch thought of something he hadn't before! What if Christmas, he thought, doesn't come from a store. What if Christmas...perhaps...means a little bit more!”</h3>
-            <img src="img/dr-seuss.png" align="left" />
-            <h4 class="author_name_gray">Dr. Seuss </h4>
-          </div>
-        </div>
-      </div>
-      <div id="slide3">
-        <div class="content">
-          <div class="quotes_container">
-            <h3 class="quotes">“I truly believe that if we keep telling the Christmas story, singing the Christmas songs, and living the Christmas spirit, we can bring joy and happiness and peace to this world.” </h3>
-            <img src="img/norman.png" align="left" />
-            <h4 class="author_name_white">Norman Vincent Peale </h4>
-          </div>
-        </div>
-      </div>
-      <div id="slide4">
-        <div class="content">
-          <div class="quotes_container">
-            <h3 class="quotes">“Christmas doesn't come from a store, maybe Christmas perhaps means a little bit more....” </h3>
-            <img src="img/dr-seuss.png" align="left" />
-            <h4 class="author_name_gray">Dr. Seuss </h4>
-          </div>
-        </div>
-      </div>
-      <div id="slide5">
-        <div class="content">
-          <div class="quotes_container">
-            <h3 class="quotes">“My idea of Christmas, whether old-fashioned or modern, is very simple: loving others. Come to think of it, why do we have to wait for Christmas to do that?” </h3>
-            <img src="img/bob.png" align="left" />
-            <h4 class="author_name_white">Bob Hope </h4>
-          </div>
-          <div id="copyright"><a href="http://www.1stwebdesigner.com/">Copyright 1stwebdesigner.com </a></div>
-        </div>
-      </div>
-    </div>-->
-  </header>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <nav-bar></nav-bar>
+  <panel-list>Loading...</panel-list>
+  
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js\bootstrap.js"></script>
-  <!-- Custom js -->
-  <script type="text/javascript" src="dist/bundle.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  
 </body>
 
 </html>

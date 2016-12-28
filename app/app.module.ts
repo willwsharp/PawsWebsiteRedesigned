@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { PanelList } from './panel-list/panel-list.component';
 import { Panel } from './panel/panel.component';
+import { NavigationBar } from './nav/nav-bar.component';
 
 @NgModule({
     imports: [
@@ -12,9 +13,10 @@ import { Panel } from './panel/panel.component';
     ],
     declarations: [
         PanelList,
-        Panel
+        Panel,
+        NavigationBar
     ],
     providers: [/* TODO: Providers go here */],
-    bootstrap: [PanelList],
+    bootstrap: [NavigationBar, PanelList],
 })
 export class AppModule { }

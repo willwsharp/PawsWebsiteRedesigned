@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var panel_list_component_1 = require('./panel-list/panel-list.component');
 var panel_component_1 = require('./panel/panel.component');
+var nav_bar_component_1 = require('./nav/nav-bar.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,10 +25,11 @@ var AppModule = (function () {
             ],
             declarations: [
                 panel_list_component_1.PanelList,
-                panel_component_1.Panel
+                panel_component_1.Panel,
+                nav_bar_component_1.NavigationBar
             ],
             providers: [],
-            bootstrap: [panel_list_component_1.PanelList],
+            bootstrap: [nav_bar_component_1.NavigationBar, panel_list_component_1.PanelList],
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
