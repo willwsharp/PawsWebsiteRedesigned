@@ -15,9 +15,6 @@ var PanelList = (function () {
         this.panelService = panelService;
     }
     PanelList.prototype.ngOnInit = function () {
-        //This is called after the component is loaded,
-        //it is a global function found in scrolling-nav.js
-        initSmoothScroll();
         this.createPanels();
     };
     PanelList.prototype.createPanels = function () {

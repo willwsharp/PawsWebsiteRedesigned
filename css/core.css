@@ -86,3 +86,10 @@ li.active::after {
     color: black;
     background-color: white;
 }
+
+
+.reset-scroll {
+    float: right;
+    padding-right: 5%;
+    
+}
