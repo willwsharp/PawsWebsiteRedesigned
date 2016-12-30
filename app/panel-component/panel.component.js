@@ -14,6 +14,11 @@ var PanelComponent = (function () {
     function PanelComponent() {
         this.shouldHaveSeparator = true;
     }
+    PanelComponent.prototype.ngOnInit = function () {
+        //This is called after the component is loaded,
+        //it is a global function found in scrolling-nav.js
+        initSmoothScroll();
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Boolean)

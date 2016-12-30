@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Panel } from '../panel/panel';
 
 @Component({
@@ -7,9 +7,15 @@ import { Panel } from '../panel/panel';
     templateUrl: 'panel.component.html'
 })
 
-export class PanelComponent {
+export class PanelComponent implements OnInit {
     @Input() shouldHaveSeparator: boolean = true;
-    @Input() panel : Panel;
-    constructor() {}
+    @Input() panel: Panel;
+    constructor() { }
+
+    ngOnInit(): void {
+        //This is called after the component is loaded,
+        //it is a global function found in scrolling-nav.js
+        initSmoothScroll();
+    }
 
 }

@@ -12,11 +12,16 @@ var core_1 = require('@angular/core');
 var RootComponent = (function () {
     function RootComponent() {
     }
+    RootComponent.prototype.ngOnInit = function () {
+        //This is called after the component is loaded,
+        //it is a global function found in scrolling-nav.js
+        initSmoothScroll();
+    };
     RootComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'core-component',
-            template: "\n          <nav-bar></nav-bar>\n          <panel-list>Loading...</panel-list>\n          <footer-component></footer-component>\n        "
+            template: "\n    <nav-bar></nav-bar>\n    <panel-list>Loading...</panel-list>\n    <footer-component></footer-component>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], RootComponent);
