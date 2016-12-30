@@ -9,13 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var panel_service_1 = require('../panel-service/panel.service');
 var PanelList = (function () {
-    function PanelList() {
+    function PanelList(panelService) {
+        this.panelService = panelService;
     }
     PanelList.prototype.ngOnInit = function () {
         //This is called after the component is loaded,
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
+        this.createPanels();
+    };
+    PanelList.prototype.createPanels = function () {
+        this._panels = this.panelService.createPanels();
+    };
+    PanelList.prototype.getPanelList = function () {
+        return this._panels;
     };
     PanelList = __decorate([
         core_1.Component({
@@ -23,7 +32,7 @@ var PanelList = (function () {
             selector: 'panel-list',
             templateUrl: 'panel-list.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [panel_service_1.PanelService])
     ], PanelList);
     return PanelList;
 }());

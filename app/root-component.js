@@ -9,22 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Panel = (function () {
-    function Panel() {
+var RootComponent = (function () {
+    function RootComponent() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], Panel.prototype, "slave", void 0);
-    Panel = __decorate([
+    RootComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'panel',
-            templateUrl: 'panel.component.html'
+            selector: 'core-component',
+            template: "\n          <nav-bar></nav-bar>\n          <panel-list>Loading...</panel-list>\n          <footer-component></footer-component>\n        "
         }), 
         __metadata('design:paramtypes', [])
-    ], Panel);
-    return Panel;
+    ], RootComponent);
+    return RootComponent;
 }());
-exports.Panel = Panel;
-//# sourceMappingURL=panel.component.js.map
+exports.RootComponent = RootComponent;
+//# sourceMappingURL=root-component.js.map

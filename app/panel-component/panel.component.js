@@ -9,18 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var NavigationBar = (function () {
-    function NavigationBar() {
+var panel_1 = require('../panel/panel');
+var PanelComponent = (function () {
+    function PanelComponent() {
+        this.shouldHaveSeparator = true;
     }
-    NavigationBar = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], PanelComponent.prototype, "shouldHaveSeparator", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', panel_1.Panel)
+    ], PanelComponent.prototype, "panel", void 0);
+    PanelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'nav-bar',
-            templateUrl: 'nav-bar.component.html'
+            selector: 'panel-component',
+            templateUrl: 'panel.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], NavigationBar);
-    return NavigationBar;
+    ], PanelComponent);
+    return PanelComponent;
 }());
-exports.NavigationBar = NavigationBar;
-//# sourceMappingURL=nav-bar.component.js.map
+exports.PanelComponent = PanelComponent;
+//# sourceMappingURL=panel.component.js.map

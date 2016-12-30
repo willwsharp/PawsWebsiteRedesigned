@@ -3,6 +3,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 html {
     width: 100%;
@@ -18,6 +19,21 @@ html {
     height: 70%;
     padding-top: 100px;
     text-align: center;
+}
+
+.bottom-separator {
+    position: relative;
+}
+
+.bottom-separator::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 20%;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+    border-bottom: 1px solid lightgray;
 }
 
 #top{
@@ -47,4 +63,26 @@ html {
 .full-title {
     font-size: 16px;
     color: black;
+}
+
+.active {
+    position: relative;
+}
+
+li.active::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 25%;
+    bottom: 0;
+    height: 1px;
+    width: 50%;
+    border-bottom: 1px solid black;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: black;
+    background-color: white;
 }

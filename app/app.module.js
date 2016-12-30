@@ -11,9 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var root_component_1 = require('./root-component');
+var panel_service_1 = require('./panel-service/panel.service');
 var panel_list_component_1 = require('./panel-list/panel-list.component');
-var panel_component_1 = require('./panel/panel.component');
-var nav_bar_component_1 = require('./nav/nav-bar.component');
+var panel_component_1 = require('./panel-component/panel.component');
+var nav_bar_component_1 = require('./nav-bar-component/nav-bar.component');
+var footer_component_1 = require('./footer-component/footer.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,12 +27,14 @@ var AppModule = (function () {
                 http_1.HttpModule,
             ],
             declarations: [
+                root_component_1.RootComponent,
                 panel_list_component_1.PanelList,
-                panel_component_1.Panel,
-                nav_bar_component_1.NavigationBar
+                panel_component_1.PanelComponent,
+                nav_bar_component_1.NavBarComponent,
+                footer_component_1.FooterComponent
             ],
-            providers: [],
-            bootstrap: [nav_bar_component_1.NavigationBar, panel_list_component_1.PanelList],
+            providers: [panel_service_1.PanelService],
+            bootstrap: [root_component_1.RootComponent],
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
