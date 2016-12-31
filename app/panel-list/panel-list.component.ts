@@ -11,9 +11,6 @@ export class PanelList implements OnInit {
 
     private _panels: Panel[];
     ngOnInit(): void {
-        //This is called after the component is loaded,
-        //it is a global function found in scrolling-nav.js
-        initSmoothScroll();
         this.createPanels();
     }
     
