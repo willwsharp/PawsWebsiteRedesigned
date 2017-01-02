@@ -3,6 +3,8 @@ import { Panel } from '../panel/panel';
 
 @Injectable()
 export class PanelService {
+
+    private _panels : Panel[];
     private _genericSummary: string =
     `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin diam
@@ -15,26 +17,45 @@ export class PanelService {
     tristique eget mi non, fermentum egestas nisi. Vivamus eget nisi risus.
     `;
 
-    createPanels(): Panel[] {
+    getPanels() : Panel[] {
+        if (!this._panels) {
+            this.createPanels();
+        }
+        return this._panels;
+    }
+
+    getPanel(name : string) : Panel {
+        return this._panels.find(panel => panel.name === name);
+    }
+
+    /**
+     * Creates the panels initially... this should be done in a better way
+     */
+    private createPanels(): void {
         let panels: Panel[] = [
             {
-                title: 'About',
+                name: 'About',
                 cssId: 'about',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                path: 'About/more-details'
             },
             {
-                title: 'Services',
+                name: 'Services',
                 cssId: 'services',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                path: 'Services/more-details'
             },
             {
-                title: 'Resources',
+                name: 'Resources',
                 cssId: 'resources',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                path: 'Resources/more-details'
             }
         ];
 
-        return panels;
+        this._panels = panels;
     }
+
+
 
 }

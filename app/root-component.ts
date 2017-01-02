@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     <nav-bar></nav-bar>
     <panel-list>Loading...</panel-list>
     <footer-component></footer-component>
+    <router-outlet></router-outlet>
   `
 })
 export class RootComponent implements OnInit {
