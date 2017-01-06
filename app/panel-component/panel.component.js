@@ -19,6 +19,8 @@ var PanelComponent = (function () {
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
     };
+    PanelComponent.prototype.toggleMoreDetails = function () {
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Boolean)

@@ -18,4 +18,8 @@ export class PanelComponent implements OnInit {
         initSmoothScroll();
     }
 
+    toggleMoreDetails() : void {
+        
+    }
+
 }

@@ -15,14 +15,13 @@ html {
     width: 100%;
 }
 
-.panel {
+.custom-panel {
     height: 70%;
-    padding-top: 100px;
     text-align: center;
+    position: relative;
 }
 
 .bottom-separator {
-    position: relative;
 }
 
 .bottom-separator::after {
@@ -33,7 +32,7 @@ html {
     bottom: 0;
     height: 1px;
     width: 60%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
 }
 
 #top{
@@ -91,5 +90,8 @@ li.active::after {
 .reset-scroll {
     float: right;
     padding-right: 5%;
-    
+}
+
+.read-more {
+    bottom: 5px;
 }
