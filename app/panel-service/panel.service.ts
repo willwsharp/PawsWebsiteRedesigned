@@ -29,7 +29,7 @@ export class PanelService {
     }
 
     /**
-     * Creates the panels initially... this should be done in a better way
+     * Creates the panels initially... TODO: do this in a better way
      */
     private createPanels(): void {
         let panels: Panel[] = [

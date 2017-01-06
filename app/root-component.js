@@ -21,7 +21,7 @@ var RootComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'core-component',
-            template: "\n    <nav-bar></nav-bar>\n    <panel-list>Loading...</panel-list>\n    <footer-component></footer-component>\n    <router-outlet></router-outlet>\n  "
+            template: "\n    <router-outlet></router-outlet>\n    <footer-component></footer-component>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], RootComponent);

@@ -23,7 +23,7 @@ var PanelService = (function () {
         return this._panels.find(function (panel) { return panel.name === name; });
     };
     /**
-     * Creates the panels initially... this should be done in a better way
+     * Creates the panels initially... TODO: do this in a better way
      */
     PanelService.prototype.createPanels = function () {
         var panels = [

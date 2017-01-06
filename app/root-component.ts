@@ -5,10 +5,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'core-component',
   template:
   `
-    <nav-bar></nav-bar>
-    <panel-list>Loading...</panel-list>
-    <footer-component></footer-component>
     <router-outlet></router-outlet>
+    <footer-component></footer-component>
   `
 })
 export class RootComponent implements OnInit {
