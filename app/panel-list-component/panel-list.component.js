@@ -10,28 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var panel_service_1 = require('../panel-service/panel.service');
-var PanelList = (function () {
-    function PanelList(panelService) {
+var PanelListComponent = (function () {
+    function PanelListComponent(panelService) {
         this.panelService = panelService;
     }
-    PanelList.prototype.ngOnInit = function () {
+    PanelListComponent.prototype.ngOnInit = function () {
         this.createPanels();
     };
-    PanelList.prototype.createPanels = function () {
-        this._panels = this.panelService.createPanels();
+    PanelListComponent.prototype.createPanels = function () {
+        this._panels = this.panelService.getPanels();
     };
-    PanelList.prototype.getPanelList = function () {
+    PanelListComponent.prototype.getPanelList = function () {
         return this._panels;
     };
-    PanelList = __decorate([
+    PanelListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'panel-list',
             templateUrl: 'panel-list.component.html'
         }), 
         __metadata('design:paramtypes', [panel_service_1.PanelService])
-    ], PanelList);
-    return PanelList;
+    ], PanelListComponent);
+    return PanelListComponent;
 }());
-exports.PanelList = PanelList;
+exports.PanelListComponent = PanelListComponent;
 //# sourceMappingURL=panel-list.component.js.map

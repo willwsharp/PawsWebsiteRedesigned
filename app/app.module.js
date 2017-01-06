@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 var root_component_1 = require('./root-component');
 var panel_service_1 = require('./panel-service/panel.service');
-var panel_list_component_1 = require('./panel-list/panel-list.component');
+var panel_list_component_1 = require('./panel-list-component/panel-list.component');
+var panel_details_component_1 = require('./panel-details-component/panel-details.component');
 var panel_component_1 = require('./panel-component/panel.component');
 var nav_bar_component_1 = require('./nav-bar-component/nav-bar.component');
 var footer_component_1 = require('./footer-component/footer.component');
@@ -25,10 +27,21 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: '',
+                        component: panel_list_component_1.PanelListComponent
+                    },
+                    {
+                        path: ":name/more-details",
+                        component: panel_details_component_1.PanelDetailsComponent
+                    }
+                ])
             ],
             declarations: [
                 root_component_1.RootComponent,
-                panel_list_component_1.PanelList,
+                panel_list_component_1.PanelListComponent,
+                panel_details_component_1.PanelDetailsComponent,
                 panel_component_1.PanelComponent,
                 nav_bar_component_1.NavBarComponent,
                 footer_component_1.FooterComponent

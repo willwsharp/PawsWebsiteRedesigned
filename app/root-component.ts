@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'core-component',
   template:
   `
-    <nav-bar></nav-bar>
-    <panel-list>Loading...</panel-list>
+    <router-outlet></router-outlet>
     <footer-component></footer-component>
   `
 })

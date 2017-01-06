@@ -1,5 +1,6 @@
 export class Panel {
-    title: string;
+    name: string;
     summary: string;
     cssId: string;
+    path: string;
 }
