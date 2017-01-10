@@ -3,10 +3,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>{{panel.title}}</h1>
-                <p [(ngModel)]="panel.summary"></p>
+                <p class="read-more">{{fullPanelTxt}}</p>
             </div>
         </div>
     </div>
-    <a class="glyphicon glyphicon-menu-down read-more" ></a>
+    <a [ngClass]="{'glyphicon': true, 
+    'glyphicon-menu-down': !moreDetailsToggled,
+    'glyphicon-menu-up': moreDetailsToggled }"  (click)="toggleMoreDetails()"></a>
     <a class="page-scroll glyphicon glyphicon-circle-arrow-up reset-scroll" href="#top"></a>
 </div>  

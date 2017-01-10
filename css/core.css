@@ -16,12 +16,10 @@ html {
 }
 
 .custom-panel {
-    height: 70%;
+    min-height: 70%;
+    height: auto;
     text-align: center;
     position: relative;
-}
-
-.bottom-separator {
 }
 
 .bottom-separator::after {
@@ -93,5 +91,9 @@ li.active::after {
 }
 
 .read-more {
+    position: relative;
+}
+
+.read-more-btn {
     bottom: 5px;
 }

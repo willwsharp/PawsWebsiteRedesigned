@@ -13,13 +13,22 @@ var panel_1 = require('../panel/panel');
 var PanelComponent = (function () {
     function PanelComponent() {
         this.shouldHaveSeparator = true;
+        this.moreDetailsToggled = false;
     }
     PanelComponent.prototype.ngOnInit = function () {
         //This is called after the component is loaded,
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
+        this.fullPanelTxt = this.panel.summary;
     };
     PanelComponent.prototype.toggleMoreDetails = function () {
+        if (this.moreDetailsToggled) {
+            this.fullPanelTxt = this.panel.moreDetails;
+        }
+        else {
+            this.fullPanelTxt += this.panel.moreDetails;
+        }
+        this.moreDetailsToggled = !this.moreDetailsToggled;
     };
     __decorate([
         core_1.Input(), 
