@@ -20,17 +20,20 @@ export class PanelService {
             {
                 title: 'About',
                 cssId: 'about',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                moreDetails: this._genericSummary
             },
             {
                 title: 'Services',
                 cssId: 'services',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                moreDetails: this._genericSummary
             },
             {
                 title: 'Resources',
                 cssId: 'resources',
-                summary: this._genericSummary
+                summary: this._genericSummary,
+                moreDetails: this._genericSummary
             }
         ];
 

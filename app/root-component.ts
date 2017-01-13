@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'core-component',
-    template: `
-          <nav-bar></nav-bar>
-          <panel-list>Loading...</panel-list>
-          <footer-component></footer-component>
-        `
+  moduleId: module.id,
+  selector: 'core-component',
+  template:
+  `
+    <nav-bar></nav-bar>
+    <panel-list>Loading...</panel-list>
+    <footer-component></footer-component>
+  `
 })
-export class RootComponent { }
+export class RootComponent implements OnInit {
+
+  ngOnInit(): void {
+    //This is called after the component is loaded,
+    //it is a global function found in scrolling-nav.js
+    initSmoothScroll();
+  }
+}
