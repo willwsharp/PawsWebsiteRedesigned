@@ -84,10 +84,18 @@ li.active::after {
     background-color: white;
 }
 
-
 .reset-scroll {
     float: right;
     padding-right: 5%;
+}
+
+.reset-scroll.fade-out {
+    opacity: .5;
+    visibility: visible;
+}
+
+.reset-scroll.fade-in {
+    opacity: 1;
 }
 
 .read-more {
