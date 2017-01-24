@@ -1,9 +1,16 @@
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function () {
+    var backToTopOffset = 200;
+    var backToTop = $('.reset-scroll');
+
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+
+    if ($(this).scrollTop() > backToTopOffset) {
+
     }
 });
 
@@ -13,7 +20,7 @@ function initSmoothScroll () {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1000, 'easeInOutExpo');
+        }, 700, 'easeInOutExpo');
         event.preventDefault();
     });
 };
