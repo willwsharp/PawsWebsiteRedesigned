@@ -10,6 +10,7 @@ html {
     height: 100%;
 }
 
+
 .panel-img-container {
     height: 100%;
     width: 100%;
@@ -86,16 +87,35 @@ li.active::after {
 
 .reset-scroll {
     float: right;
-    padding-right: 5%;
+    padding-right: 2%;
+    position: fixed;
+    top: 93%;
+    opacity: 0;
+    right: 0;
+    visibility: hidden;
+    font-size: 40px;
+    -webkit-transition: opacity .5s 0s, visibility 0s .5s;
+    -moz-transition: opacity .5s 0s, visibility 0s .5s;
+    transition: opacity .5s 0s, visibility 0s .5s;
+    text-decoration: none !important;
+    color: black !important;
 }
 
-.reset-scroll.fade-out {
+.reset-scroll.show {
     opacity: .5;
     visibility: visible;
+    color: black;
 }
 
-.reset-scroll.fade-in {
+.reset-scroll.show:hover {
     opacity: 1;
+    color: black;
+}
+
+.reset-scroll.show:focus,
+.reset-scroll.show:active,
+.reset-scroll.show:link {
+    color: black;
 }
 
 .read-more {

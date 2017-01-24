@@ -10,7 +10,9 @@ $(window).scroll(function () {
     }
 
     if ($(this).scrollTop() > backToTopOffset) {
-
+        backToTop.addClass('show');
+    } else {
+        backToTop.removeClass('show');
     }
 });
 
