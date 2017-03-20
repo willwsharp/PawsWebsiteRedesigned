@@ -125,3 +125,54 @@ li.active::after {
 .read-more-btn {
     bottom: 5px;
 }
+
+.toggle-more-details {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.toggle-more-details:hover {
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+
+.invert-element-down {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-name: invertDown;
+    animation-name: invertDown;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.invert-element-up {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-name: invertUp;
+    animation-name: invertUp;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes invertDown {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform:rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes invertUp {
+    0% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+    100% {
+        -webkit-transform:rotate(0deg);
+        transform: rotate(0deg);
+    }
+}

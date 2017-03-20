@@ -7,8 +7,11 @@
             </div>
         </div>
     </div>
-    test
-    <a [ngClass]="{'glyphicon': true, 
-    'glyphicon-menu-down': !moreDetailsToggled,
-    'glyphicon-menu-up': moreDetailsToggled }"  (click)="toggleMoreDetails()"></a>
+    <a [ngClass]="{
+        'invert-element-up': moreDetailsToggled,
+        'invert-element-down': !moreDetailsToggled}"
+    class="glyphicon glyphicon-menu-up toggle-more-details"
+    [attr.title]="moreDetailsToggled ? 'Read less' : 'Read more'"
+    my-invert-element
+    (click)="toggleMoreDetails()"></a>
 </div>  
