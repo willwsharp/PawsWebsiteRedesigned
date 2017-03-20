@@ -11,7 +11,8 @@ export class PanelComponent implements OnInit {
     @Input() shouldHaveSeparator: boolean = true;
     @Input() panel: Panel;
 
-    fullPanelTxt: string;
+    panelSummary: string;
+    panelMoreDetails: string;
     moreDetailsToggled: boolean = false;
     constructor() { }
 
@@ -20,16 +21,11 @@ export class PanelComponent implements OnInit {
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
 
-        this.fullPanelTxt = this.panel.summary;
+        this.panelSummary = this.panel.summary;
+        this.panelMoreDetails = this.panel.moreDetails;
     }
 
     toggleMoreDetails(): void {
-        if (this.moreDetailsToggled) {
-            this.fullPanelTxt = this.panel.summary;
-        } else {
-            this.fullPanelTxt += this.panel.moreDetails;
-        }
-
         this.moreDetailsToggled = !this.moreDetailsToggled;
     }
 

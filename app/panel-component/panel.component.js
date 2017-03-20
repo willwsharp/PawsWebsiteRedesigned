@@ -20,15 +20,10 @@ var PanelComponent = (function () {
         //This is called after the component is loaded,
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
-        this.fullPanelTxt = this.panel.summary;
+        this.panelSummary = this.panel.summary;
+        this.panelMoreDetails = this.panel.moreDetails;
     };
     PanelComponent.prototype.toggleMoreDetails = function () {
-        if (this.moreDetailsToggled) {
-            this.fullPanelTxt = this.panel.summary;
-        }
-        else {
-            this.fullPanelTxt += this.panel.moreDetails;
-        }
         this.moreDetailsToggled = !this.moreDetailsToggled;
     };
     return PanelComponent;

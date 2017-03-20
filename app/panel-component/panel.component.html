@@ -3,7 +3,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>{{panel.title}}</h1>
-                <p class="read-more">{{fullPanelTxt}}</p>
+                <p class="panel-text">{{panelSummary}}</p>
+                <p *ngIf="moreDetailsToggled" [innerHtml]="panelMoreDetails"
+                [ngClass]="{
+                    'fade-in' : moreDetailsToggled,
+                    'fade-out': !moreDetailsToggled}"
+                class="panel-text more-details"></p>
             </div>
         </div>
     </div>
