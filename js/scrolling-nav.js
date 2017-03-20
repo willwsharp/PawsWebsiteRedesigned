@@ -1,7 +1,7 @@
 //  jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
-    var backToTopOffset = 200;
-    var backToTop = $('.reset-scroll');
+    let backToTopOffset = 200;
+    let backToTop = $('.reset-scroll');
 
     if ($('.navbar').offset().top > 50) {
         $('.navbar-fixed-top').addClass('top-nav-collapse');
@@ -19,7 +19,7 @@ $(window).scroll(function() {
 //  jQuery for page scrolling feature - requires jQuery Easing plugin
 function initSmoothScroll() {
     $('a.page-scroll').on('click', function(event) {
-        var $anchor = $(this);
+        let $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top,
         }, 700, 'easeInOutExpo');

@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var panel_service_1 = require('../panel-service/panel.service');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var panel_service_1 = require("../panel-service/panel.service");
 var PanelList = (function () {
     function PanelList(panelService) {
         this.panelService = panelService;
@@ -23,15 +24,15 @@ var PanelList = (function () {
     PanelList.prototype.getPanelList = function () {
         return this._panels;
     };
-    PanelList = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'panel-list',
-            templateUrl: 'panel-list.component.html'
-        }), 
-        __metadata('design:paramtypes', [panel_service_1.PanelService])
-    ], PanelList);
     return PanelList;
 }());
+PanelList = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'panel-list',
+        templateUrl: 'panel-list.component.html'
+    }),
+    __metadata("design:paramtypes", [panel_service_1.PanelService])
+], PanelList);
 exports.PanelList = PanelList;
 //# sourceMappingURL=panel-list.component.js.map

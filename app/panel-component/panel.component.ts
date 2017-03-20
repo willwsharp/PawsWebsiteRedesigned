@@ -25,7 +25,7 @@ export class PanelComponent implements OnInit {
 
     toggleMoreDetails(): void {
         if (this.moreDetailsToggled) {
-            this.fullPanelTxt = this.panel.moreDetails;
+            this.fullPanelTxt = this.panel.summary;
         } else {
             this.fullPanelTxt += this.panel.moreDetails;
         }
