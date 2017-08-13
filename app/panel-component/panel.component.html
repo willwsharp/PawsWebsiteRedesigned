@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>{{panel.title}}</h1>
-                <p class="panel-text">{{panelSummary}}</p>
+                <p class="panel-text" [innerHtml]="panelSummary"></p>
                 <p *ngIf="moreDetailsToggled" [innerHtml]="panelMoreDetails"
                 [ngClass]="{
                     'fade-in' : moreDetailsToggled,
@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    <a [ngClass]="{
+    <a *ngIf="hasMoreDetails" [ngClass]="{
         'invert-element-up': moreDetailsToggled,
         'invert-element-down': !moreDetailsToggled}"
     class="glyphicon glyphicon-menu-up toggle-more-details"

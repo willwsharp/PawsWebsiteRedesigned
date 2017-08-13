@@ -14,6 +14,7 @@ export class PanelComponent implements OnInit {
     panelSummary: string;
     panelMoreDetails: string;
     moreDetailsToggled: boolean = false;
+    hasMoreDetails: boolean = false;
     constructor() { }
 
     ngOnInit(): void {
@@ -22,6 +23,9 @@ export class PanelComponent implements OnInit {
         initSmoothScroll();
 
         this.panelSummary = this.panel.summary;
+        if (this.panel.moreDetails) {
+            this.hasMoreDetails = true;
+        }
         this.panelMoreDetails = this.panel.moreDetails;
     }
 

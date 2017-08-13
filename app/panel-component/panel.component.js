@@ -15,12 +15,16 @@ var PanelComponent = (function () {
     function PanelComponent() {
         this.shouldHaveSeparator = true;
         this.moreDetailsToggled = false;
+        this.hasMoreDetails = false;
     }
     PanelComponent.prototype.ngOnInit = function () {
         //This is called after the component is loaded,
         //it is a global function found in scrolling-nav.js
         initSmoothScroll();
         this.panelSummary = this.panel.summary;
+        if (this.panel.moreDetails) {
+            this.hasMoreDetails = true;
+        }
         this.panelMoreDetails = this.panel.moreDetails;
     };
     PanelComponent.prototype.toggleMoreDetails = function () {

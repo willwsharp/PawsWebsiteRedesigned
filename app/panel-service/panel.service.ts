@@ -51,8 +51,20 @@ export class PanelService {
             {
                 title: 'Services',
                 cssId: 'services',
-                summary: this._genericSummary,
-                moreDetails: this._genericSummary
+                summary: 
+                `
+                Ms. Woodward is engaged in a general practice of law. Her areas of practice include:
+                <ul>
+                    <li>Estate Planning</li>
+                    <li>Estate Administration</li>
+                    <li>Real Estate matters including sales, purchases and refinances</li>
+                    <li>Real Estate Partition Actions</li>
+                    <li>Guardianships and Conservatorships</li>
+                    <li>Creation of corporations, limited liability companies, partnerships and other business matters</li>
+                </ul>
+
+                For Business, Lititgation, and Family Law contact <a href="http://www.csadlawyers.com/" target="_blank">Culin, Sharp, Autry & Day</a>
+                `
             },
             {
                 title: 'Resources',
