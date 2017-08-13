@@ -24,15 +24,15 @@ var PanelList = (function () {
     PanelList.prototype.getPanelList = function () {
         return this._panels;
     };
+    PanelList = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'panel-list',
+            templateUrl: 'panel-list.component.html'
+        }),
+        __metadata("design:paramtypes", [panel_service_1.PanelService])
+    ], PanelList);
     return PanelList;
 }());
-PanelList = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'panel-list',
-        templateUrl: 'panel-list.component.html'
-    }),
-    __metadata("design:paramtypes", [panel_service_1.PanelService])
-], PanelList);
 exports.PanelList = PanelList;
 //# sourceMappingURL=panel-list.component.js.map

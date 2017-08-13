@@ -13,15 +13,15 @@ var core_1 = require("@angular/core");
 var NavBarComponent = (function () {
     function NavBarComponent() {
     }
+    NavBarComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'nav-bar',
+            templateUrl: 'nav-bar.component.html'
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavBarComponent);
     return NavBarComponent;
 }());
-NavBarComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'nav-bar',
-        templateUrl: 'nav-bar.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], NavBarComponent);
 exports.NavBarComponent = NavBarComponent;
 //# sourceMappingURL=nav-bar.component.js.map

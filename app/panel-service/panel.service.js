@@ -33,10 +33,10 @@ var PanelService = (function () {
         ];
         return panels;
     };
+    PanelService = __decorate([
+        core_1.Injectable()
+    ], PanelService);
     return PanelService;
 }());
-PanelService = __decorate([
-    core_1.Injectable()
-], PanelService);
 exports.PanelService = PanelService;
 //# sourceMappingURL=panel.service.js.map

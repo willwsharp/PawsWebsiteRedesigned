@@ -18,24 +18,24 @@ var footer_component_1 = require("./footer-component/footer.component");
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+            ],
+            declarations: [
+                root_component_1.RootComponent,
+                panel_list_component_1.PanelList,
+                panel_component_1.PanelComponent,
+                nav_bar_component_1.NavBarComponent,
+                footer_component_1.FooterComponent
+            ],
+            providers: [panel_service_1.PanelService],
+            bootstrap: [root_component_1.RootComponent],
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            http_1.HttpModule,
-        ],
-        declarations: [
-            root_component_1.RootComponent,
-            panel_list_component_1.PanelList,
-            panel_component_1.PanelComponent,
-            nav_bar_component_1.NavBarComponent,
-            footer_component_1.FooterComponent
-        ],
-        providers: [panel_service_1.PanelService],
-        bootstrap: [root_component_1.RootComponent],
-    })
-], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

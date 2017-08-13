@@ -30,23 +30,23 @@ var PanelComponent = (function () {
     PanelComponent.prototype.toggleMoreDetails = function () {
         this.moreDetailsToggled = !this.moreDetailsToggled;
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], PanelComponent.prototype, "shouldHaveSeparator", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", panel_1.Panel)
+    ], PanelComponent.prototype, "panel", void 0);
+    PanelComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'panel-component',
+            templateUrl: 'panel.component.html'
+        }),
+        __metadata("design:paramtypes", [])
+    ], PanelComponent);
     return PanelComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], PanelComponent.prototype, "shouldHaveSeparator", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", panel_1.Panel)
-], PanelComponent.prototype, "panel", void 0);
-PanelComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'panel-component',
-        templateUrl: 'panel.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], PanelComponent);
 exports.PanelComponent = PanelComponent;
 //# sourceMappingURL=panel.component.js.map
