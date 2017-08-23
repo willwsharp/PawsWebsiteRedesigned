@@ -20,11 +20,11 @@ $(window).scroll(function() {
 function initSmoothScroll() {
     $('a.page-scroll').on('click', function(event) {
         let target = $(this.getAttribute('href'));
-        let navBar = $("#mainNavBar")[0];
+        let navBarHeight = $("#mainNavBar").height();
         if (target.length) {
             event.preventDefault();
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 79
+                scrollTop: target.offset().top - navBarHeight
             }, 700, 'easeInOutExpo');
         }
     });
