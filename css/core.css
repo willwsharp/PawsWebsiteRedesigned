@@ -43,6 +43,12 @@ html {
 
 #float-navbar-right {
     float: right;
+    text-align: center;
+    font-size: 18px;
+}
+
+#float-navbar-right li {
+    /* width: 101px; */
 }
 
 .paws-logo {
@@ -71,10 +77,10 @@ li.active::after {
     content: '';
     position: absolute;
     display: inline-block;
-    left: 25%;
     bottom: 0;
+    left: 0%;
     height: 1px;
-    width: 50%;
+    width: 100%;
     border-bottom: 1px solid black;
 }
 
@@ -216,4 +222,30 @@ li.active::after {
     100% {
         opacity: 0;
     }
+}
+
+.paws-footer {
+    min-height: 21.5%;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 11px;
+}
+
+.paws-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.additionalInfo {
+    padding: 10% 0% 0% 10%;
+}
+
+#disclaimerModal {
+    color: black;
+    font-size: 16px;
+}
+
+.modal-open {
+    padding-right: 0 !important;
+    overflow-y: scroll !important;
 }

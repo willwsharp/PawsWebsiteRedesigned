@@ -14,7 +14,12 @@
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
 
+  <!-- Google Maps -->
+  <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrOqu_bxKr-imQkZDWMJa9rXYjiBnRans"></script>
+  
   <!-- Bootstrap -->
+  <!-- Tether.io is required for bootstrap 4 -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>  
   <link href="css/bootstrap.css" rel="stylesheet">
 
   <!-- Open Sans from Google Fonts -->
@@ -27,10 +32,9 @@
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
 
-  <!-- Scrolling Nav JavaScript -->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrolling-nav.js"></script>
 
+
+  <!-- Scripts that come with Angular 2 -->
   <script src="systemjs.config.js"></script>
   <script>
     System.import('app').catch(function (err) { console.error(err); });
@@ -38,7 +42,7 @@
 </head>
 
 <!-- scrollspy is set here! -->
-<body id="page-top" data-spy="scroll" data-target="#mainNavBar" data-offset="79">
+<body id="page-top" data-spy="scroll" data-target="#mainNavBar" data-offset="82">
   
   <core-component></core-component>
   

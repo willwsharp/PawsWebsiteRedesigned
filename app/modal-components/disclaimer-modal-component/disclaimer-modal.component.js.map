@@ -1,0 +1,1 @@
+{"version":3,"file":"disclaimer-modal.component.js","sourceRoot":"","sources":["disclaimer-modal.component.ts"],"names":[],"mappings":";;;;;;;;;;;AAAA,sCAA0C;AAO1C;IACI;IAAgB,CAAC;IADR,wBAAwB;QALpC,gBAAS,CAAC;YACP,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,kBAAkB;YAC5B,WAAW,EAAE,iCAAiC;SACjD,CAAC;;OACW,wBAAwB,CAEpC;IAAD,+BAAC;CAAA,AAFD,IAEC;AAFY,4DAAwB"}

@@ -1,5 +1,43 @@
-<footer clas="footer">
+<footer clas="footer" class="paws-footer">
     <div class="container">
-        <p class="text-muted">I'm a footer!</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Contact</h3>
+                <div class="contact-div">
+                    <span>31 S. Second Street</span> <br>
+                    <span>Warrenton, Va 20187</span> <br>
+                    <!-- TODO: make sure this works on mobile -->
+                    <a href="tel:5403471482">Tel: (540)-347-1482</a> <br>
+                    <span>Fax: (866)-876-2295</span> <br>
+                    <!-- TODO: make sure this works on mobile -->
+                    <a href="mailto:pwoodward@patwoodwardlawoffice.com" target="_top">pwoodward@patwoodwardlawoffice.com</a>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h3>Business Hours</h3>
+                <!-- TODO: maybe make this reflect current time? -->
+                <div class="business-hours-div">
+                    <span><strong>Mon - Fri</strong> 8:00am - 12:00pm, 1:00pm - 4:30pm</span> <br>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <!-- TODO: design this section better -->
+                <div class="additionalInfo">
+                    <disclaimer-modal></disclaimer-modal> <br>
+                    <button class="btn btn-primary" id="privacyModal">
+                            Privacy Statement
+                    </button> <br>
+                    <button class="btn btn-primary" id="faqModal">
+                            F.A.Q.
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br> <br>
+        <div class="row" style="text-align: center;">
+            <div class="col-sm-12">
+                <sub style="font-size: 9px;">@2017 Patricia A. Woodward - All Rights Reserved.</sub>
+            </div>
+        </div>
     </div>
 </footer>

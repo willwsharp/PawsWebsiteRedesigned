@@ -7,7 +7,9 @@ import { PanelList } from './panel-list/panel-list.component';
 import { PanelComponent } from './panel-component/panel.component';
 import { NavBarComponent } from './nav-bar-component/nav-bar.component';
 import { FooterComponent } from './footer-component/footer.component';
+import { DisclaimerModalComponent } from './modal-components/disclaimer-modal-component/disclaimer-modal.component';
 
+// modularise this app
 @NgModule({
     imports: [
         BrowserModule,
@@ -18,7 +20,8 @@ import { FooterComponent } from './footer-component/footer.component';
         PanelList,
         PanelComponent,
         NavBarComponent,
-        FooterComponent
+        FooterComponent,
+        DisclaimerModalComponent
     ],
     providers: [PanelService],
     bootstrap: [RootComponent],

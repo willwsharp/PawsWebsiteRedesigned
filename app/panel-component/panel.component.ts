@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Panel } from '../panel/panel';
 
+//telling angular2 that this is declared outside of angular
+declare var initSmoothScroll: any;
+
 @Component({
     moduleId: module.id,
     selector: 'panel-component',
