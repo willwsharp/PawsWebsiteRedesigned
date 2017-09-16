@@ -11,16 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var panel_1 = require("../panel/panel");
+var scroll_service_1 = require("../scroll-service/scroll.service");
 var PanelComponent = (function () {
-    function PanelComponent() {
+    function PanelComponent(scrollService) {
+        this.scrollService = scrollService;
         this.shouldHaveSeparator = true;
         this.moreDetailsToggled = false;
         this.hasMoreDetails = false;
     }
     PanelComponent.prototype.ngOnInit = function () {
-        //This is called after the component is loaded,
-        //it is a global function found in scrolling-nav.js
-        initSmoothScroll();
+        this.scrollService.initSmoothScroll();
         this.panelSummary = this.panel.summary;
         if (this.panel.moreDetails) {
             this.hasMoreDetails = true;
@@ -44,7 +44,7 @@ var PanelComponent = (function () {
             selector: 'panel-component',
             templateUrl: 'panel.component.html'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [scroll_service_1.ScrollService])
     ], PanelComponent);
     return PanelComponent;
 }());

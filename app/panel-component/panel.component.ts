@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Panel } from '../panel/panel';
+import { ScrollService } from '../scroll-service/scroll.service';
 
-//telling angular2 that this is declared outside of angular
-declare var initSmoothScroll: any;
+declare var $: any;
 
 @Component({
     moduleId: module.id,
@@ -18,12 +18,10 @@ export class PanelComponent implements OnInit {
     panelMoreDetails: string;
     moreDetailsToggled: boolean = false;
     hasMoreDetails: boolean = false;
-    constructor() { }
+    constructor(private scrollService: ScrollService) { }
 
     ngOnInit(): void {
-        //This is called after the component is loaded,
-        //it is a global function found in scrolling-nav.js
-        initSmoothScroll();
+        this.scrollService.initSmoothScroll();
 
         this.panelSummary = this.panel.summary;
         if (this.panel.moreDetails) {

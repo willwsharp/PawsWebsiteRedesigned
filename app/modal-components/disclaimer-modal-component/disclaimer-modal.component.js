@@ -10,16 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var modal_data_service_1 = require("../../modal-data-service/modal-data.service");
 var DisclaimerModalComponent = (function () {
-    function DisclaimerModalComponent() {
+    function DisclaimerModalComponent(modalDataService) {
+        this.modalDataService = modalDataService;
+        this.modalText = '';
+        this.modalTitle = '';
+        this.modalName = modalDataService.getModalTitle(this.modalName);
     }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], DisclaimerModalComponent.prototype, "modalName", void 0);
     DisclaimerModalComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'disclaimer-modal',
             templateUrl: 'disclaimer-modal.component.html'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [modal_data_service_1.ModalDataService])
     ], DisclaimerModalComponent);
     return DisclaimerModalComponent;
 }());

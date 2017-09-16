@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ModalDataService } from "../../modal-data-service/modal-data.service";
 
 @Component({
     moduleId: module.id,
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
     templateUrl: 'disclaimer-modal.component.html'
 })
 export class DisclaimerModalComponent {
-    constructor() { }
+    @Input() modalName: string;
+
+
+    private modalText: string = '';
+    private modalTitle: string ='';
+
+    constructor(private modalDataService: ModalDataService) {
+        this.modalName = modalDataService.getModalTitle(this.modalName);
+    }
 }

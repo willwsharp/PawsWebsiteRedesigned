@@ -11,12 +11,14 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var root_component_1 = require("./root-component");
 var panel_service_1 = require("./panel-service/panel.service");
+var scroll_service_1 = require("./scroll-service/scroll.service");
+var modal_data_service_1 = require("./modal-data-service/modal-data.service");
 var panel_list_component_1 = require("./panel-list/panel-list.component");
 var panel_component_1 = require("./panel-component/panel.component");
 var nav_bar_component_1 = require("./nav-bar-component/nav-bar.component");
 var footer_component_1 = require("./footer-component/footer.component");
 var disclaimer_modal_component_1 = require("./modal-components/disclaimer-modal-component/disclaimer-modal.component");
-// modularise this app
+// TODO: modularise this app
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +36,9 @@ var AppModule = (function () {
                 footer_component_1.FooterComponent,
                 disclaimer_modal_component_1.DisclaimerModalComponent
             ],
-            providers: [panel_service_1.PanelService],
+            providers: [panel_service_1.PanelService,
+                scroll_service_1.ScrollService,
+                modal_data_service_1.ModalDataService],
             bootstrap: [root_component_1.RootComponent],
         })
     ], AppModule);

@@ -1,10 +1,12 @@
 /*Core CSS */
+
 body {
     width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
+
 html {
     width: 100%;
     height: 100%;
@@ -245,7 +247,7 @@ li.active::after {
     font-size: 16px;
 }
 
-.modal-open {
-    padding-right: 0 !important;
-    overflow-y: scroll !important;
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    padding-right: 0px !important;
+    overflow-y: auto;
 }

@@ -11,9 +11,6 @@ var RootComponent = (function () {
     function RootComponent() {
     }
     RootComponent.prototype.ngOnInit = function () {
-        //This is called after the component is loaded,
-        //it is a global function found in scrolling-nav.js
-        //initSmoothScroll();
     };
     RootComponent = __decorate([
         core_1.Component({
