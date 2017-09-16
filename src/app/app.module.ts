@@ -11,7 +11,7 @@ import { PanelList } from './panel/panel-list.component';
 import { PanelComponent } from './panel/panel.component';
 import { NavBarComponent } from './navbar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
-import { DisclaimerModalComponent } from './modals/disclaimer-modal.component';
+import { ModalComponent } from './modals/modal.component';
 
 
 // TODO: modularise this app
@@ -26,7 +26,7 @@ import { DisclaimerModalComponent } from './modals/disclaimer-modal.component';
         PanelComponent,
         NavBarComponent,
         FooterComponent,
-        DisclaimerModalComponent
+        ModalComponent
     ],
     providers: [PanelService,
         ScrollService,

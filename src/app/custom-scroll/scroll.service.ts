@@ -10,8 +10,6 @@ export class ScrollService {
             let backToTopOffset = 200;
             let backToTop = $('.reset-scroll');
 
-            let disclaimerModalOpened = ($('#disclaimerModal').data('bs.modal') || {}).isShown;
-
             if ($('.navbar').offset().top > 50) {
                 $('.navbar-fixed-top').addClass('top-nav-collapse');
             } else {

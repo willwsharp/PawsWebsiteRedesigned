@@ -6,15 +6,19 @@ export class ModalDataService {
 
     constructor() { }
 
-    getModalTitle(_modalTitle: string): string {
-        
-        
-        if (_modalTitle === "disclaimerModal") {
+    getModalTitle(_modalName: string): string {
+        if (_modalName === "disclaimerModal") {
+            return this.getDisclaimerModalTitle();
+        } else if (_modalName === "privacyModal") {
+            return this.getPrivacyModalTitle();
+        }
+    }
+
+    getModalText(_modalName: string): string {
+        if (_modalName === "disclaimerModal") {
             return this.getDisclaimerModalText();
-        } else if (_modalTitle === "privacyModal") {
-
-        } else if (_modalTitle === "faqModal") {
-
+        } else if (_modalName === "privacyModal") {
+            return this.getPrivacyModalText();
         }
     }
 
