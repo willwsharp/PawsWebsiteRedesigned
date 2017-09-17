@@ -12,6 +12,17 @@ html {
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
 
 .panel-img-container {
     height: 100%;
@@ -233,7 +244,7 @@ li.active::after {
     font-size: 11px;
 }
 
-.paws-footer a {
+.paws-footer-links {
     color: white;
     text-decoration: none;
 }
@@ -242,12 +253,23 @@ li.active::after {
     padding: 10% 0% 0% 10%;
 }
 
-#disclaimerModal, #privacyModal {
+#disclaimerModal, #privacyModal, #FAQModal {
     color: black;
     font-size: 16px;
 }
 
+.faq-modal-accordion-title {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
 
+.accordion-card-title {
+     cursor: pointer;
+}
+
+/* prevents some content from moving left when opening a modal but enables
+   scrolling... not sure which is better? */
 body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
     padding-right: 0px !important;
     overflow-y: auto;

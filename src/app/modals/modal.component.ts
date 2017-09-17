@@ -12,7 +12,7 @@ export class ModalComponent {
     modalTitle: string = '';
     modalText: string = '';
 
-    constructor(private modalDataService: ModalDataService) { }
+    constructor(private modalDataService: ModalDataService) {}
 
     ngOnInit(): void {
         this.modalText = this.modalDataService.getModalText(this.modalName);
