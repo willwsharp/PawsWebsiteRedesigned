@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FAQPanel } from './FAQPanel';
+import { FAQPanel } from './FAQPanel.model';
 
 @Injectable()
 export class FAQModalService {

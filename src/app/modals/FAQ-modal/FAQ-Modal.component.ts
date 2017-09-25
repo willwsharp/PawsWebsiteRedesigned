@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { FAQModalService } from './FAQ-modal.service';
-import { FAQPanel } from './FAQPanel';
+import { FAQPanel } from './FAQPanel.model';
 
 @Component({
     moduleId: module.id,

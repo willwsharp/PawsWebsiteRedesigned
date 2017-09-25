@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { ModalDataService } from "./modal-data.service";
 
 @Component({
@@ -12,10 +14,17 @@ export class ModalComponent {
     modalTitle: string = '';
     modalText: string = '';
 
-    constructor(private modalDataService: ModalDataService) {}
+    closeResult: string;
+
+    constructor(private modalDataService: ModalDataService,
+                private ngbModalService: NgbModal) {}
 
     ngOnInit(): void {
         this.modalText = this.modalDataService.getModalText(this.modalName);
         this.modalTitle = this.modalDataService.getModalTitle(this.modalName);
+    }
+
+    open(content) {
+        this.ngbModalService.open(content);
     }
 }
