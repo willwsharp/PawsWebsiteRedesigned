@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Panel } from './panel';
+import { Panel } from './panel.model';
 
 @Injectable()
 export class PanelService {

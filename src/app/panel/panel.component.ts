@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Panel } from '../panel/panel';
-import { ScrollService } from '../custom-scroll/scroll.service';
+import { Panel } from '../panel/panel.model';
 
 declare var $: any;
 
@@ -18,11 +17,8 @@ export class PanelComponent implements OnInit {
     panelMoreDetails: string;
     moreDetailsToggled: boolean = false;
     hasMoreDetails: boolean = false;
-    constructor(private scrollService: ScrollService) { }
 
     ngOnInit(): void {
-        this.scrollService.initSmoothScroll();
-
         this.panelSummary = this.panel.summary;
         if (this.panel.moreDetails) {
             this.hasMoreDetails = true;

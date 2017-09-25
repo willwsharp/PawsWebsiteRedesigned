@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Panel } from '../panel/panel';
+import { Panel } from '../panel/panel.model';
 import { PanelService } from './panel.service';
 
 @Component({

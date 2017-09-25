@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RootComponent } from './root.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { Ng2PageScrollModule, PageScrollService } from 'ng2-page-scroll';
+
 import { PanelService } from './panel/panel.service';
-import { ScrollService } from './custom-scroll/scroll.service';
 import { ModalDataService } from './modals/modal-data.service';
 import { FAQModalService } from './modals/FAQ-modal/FAQ-modal.service';
 
@@ -14,6 +16,8 @@ import { NavBarComponent } from './navbar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalComponent } from './modals/modal.component';
 import { FAQModalComponent } from "./modals/FAQ-modal/FAQ-modal.component";
+import { NavbarEnlargeDirective } from './shared/directives/navbar-enlarge.directive';
+import { ScrollSpyDirective } from './shared/directives/scroll-spy.directive';
 
 
 // TODO: modularise this app
@@ -21,6 +25,8 @@ import { FAQModalComponent } from "./modals/FAQ-modal/FAQ-modal.component";
     imports: [
         BrowserModule,
         HttpModule,
+        NgbModule.forRoot(),
+        Ng2PageScrollModule
     ],
     declarations: [
         RootComponent,
@@ -29,12 +35,14 @@ import { FAQModalComponent } from "./modals/FAQ-modal/FAQ-modal.component";
         NavBarComponent,
         FooterComponent,
         ModalComponent,
-        FAQModalComponent
+        FAQModalComponent,
+        NavbarEnlargeDirective,
+        ScrollSpyDirective
     ],
     providers: [
         PanelService,
-        ScrollService,
         ModalDataService,
+        PageScrollService,
         FAQModalService],
     bootstrap: [RootComponent],
 })
