@@ -28,7 +28,7 @@ export class ScrollSpyDirective implements DoCheck {
         return;
       }
     });
-  }
+  } 
 
   private resetCurrentLink(): void {
     if (!this.currentActiveLink) {
