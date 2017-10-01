@@ -252,18 +252,3 @@ li.active::after {
 .additionalInfo {
     margin-top: 20px;
 }
-
-#disclaimerModal, #privacyModal, #FAQModal {
-    color: black;
-    font-size: 16px;
-}
-
-.faq-modal-accordion-title {
-    color: black;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.accordion-card-title {
-     cursor: pointer;
-}
