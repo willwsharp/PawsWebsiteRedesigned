@@ -19,10 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "assets/css/core.css",
+        "assets/css/scrolling-nav.css"
       ],
       "scripts": [
-        "assets/js/jquery.min.js"
+        "../node_modules/hammerjs/hammer.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
