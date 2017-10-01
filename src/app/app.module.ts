@@ -1,41 +1,57 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 import { RootComponent } from './root.component';
+import { FormsModule } from '@angular/forms';
 
-import { PanelService } from './panel/panel.service';
-import { ScrollService } from './custom-scroll/scroll.service';
-import { ModalDataService } from './modals/modal-data.service';
-import { FAQModalService } from './modals/FAQ-modal/FAQ-modal.service';
 
-import { PanelList } from './panel/panel-list.component';
-import { PanelComponent } from './panel/panel.component';
+import { Ng2PageScrollModule, PageScrollService } from 'ng2-page-scroll';
+
+
 import { NavBarComponent } from './navbar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ModalComponent } from './modals/modal.component';
-import { FAQModalComponent } from "./modals/FAQ-modal/FAQ-modal.component";
+import { ModalContainerComponent } from './footer/modal-container/modal-container.component'
 
+
+import { NavbarEnlargeDirective } from './shared/directives/navbar-enlarge.directive';
+import { ScrollSpyDirective } from './shared/directives/scroll-spy.directive';
+
+import { NgMaterialBaseModule } from './ng-material-base/ng-material-base.module';
+import { PawsModalComponent } from './footer/modal-container/paws-modals/paws-modal.component';
+import { PawsModalService } from './footer/modal-container/paws-modals/paws-modal.service';
+import { PanelList } from './panel-list/panel-list.component';
+import { AboutPanelComponent } from './panel-list/panels/about-panel/about-panel.component';
+import { ServicesPanelComponent } from './panel-list/panels/services-panel/services-panel.component';
+import { ResourcesPanelComponent } from './panel-list/panels/resources-panel/resources-panel.component';
+import { PanelService } from './panel-list/panel.service';
 
 // TODO: modularise this app
 @NgModule({
     imports: [
         BrowserModule,
-        HttpModule,
+        Ng2PageScrollModule,
+        NgMaterialBaseModule,
+        FormsModule
     ],
     declarations: [
         RootComponent,
         PanelList,
-        PanelComponent,
         NavBarComponent,
         FooterComponent,
-        ModalComponent,
-        FAQModalComponent
+        NavbarEnlargeDirective,
+        ScrollSpyDirective,
+        ModalContainerComponent,
+        PawsModalComponent,
+        AboutPanelComponent,
+        ServicesPanelComponent,
+        ResourcesPanelComponent
     ],
     providers: [
         PanelService,
-        ScrollService,
-        ModalDataService,
-        FAQModalService],
+        PawsModalService,
+        PageScrollService],
     bootstrap: [RootComponent],
+    entryComponents: [
+        PawsModalComponent
+    ]
 })
 export class AppModule { }

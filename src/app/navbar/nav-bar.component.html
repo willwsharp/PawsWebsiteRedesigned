@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="mainNavBar" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top paws-navbar" id="mainNavBar" role="navigation" pawsNavbarEnlarge pawsScrollSpy>
   <div class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="navbar-brand paws-logo">
+      <div class="navbar-brand paws-logo"[ngStyle]="{'min-height': minImgHeight}">
         <img src="../../assets/images/PawsLogo.png">
       </div>
     </div>
@@ -17,16 +17,16 @@
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav" id="float-navbar-right">
         <li class="active">
-          <a class="page-scroll" href="#top">Home</a>
+          <a href="#top" pageScroll>Home</a>
         </li>
         <li>
-          <a class="page-scroll" href="#about">About</a>
+          <a href="#about" pageScroll>About</a>
         </li>
         <li>
-          <a class="page-scroll" href="#services">Services</a>
+          <a href="#services" pageScroll>Services</a>
         </li>
         <li>
-          <a class="page-scroll" href="#resources">Resources</a>
+          <a href="#resources" pageScroll>Resources</a>
         </li>
       </ul>
     </div>

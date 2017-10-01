@@ -1,9 +1,0 @@
-<!-- Intro Section -->
-<section id="top" class="panel">
-</section>
-
-<panel-component *ngFor="let panel of getPanelList(); let i = index" 
-    [panel]="panel" 
-    [shouldHaveSeparator]="i < getPanelList().length-1">
-</panel-component>
-<a class="page-scroll glyphicon glyphicon-arrow-up reset-scroll" href="#top" title="Return to top"></a>
