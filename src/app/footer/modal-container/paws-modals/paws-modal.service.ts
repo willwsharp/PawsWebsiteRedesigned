@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AccordionModel } from '../../../shared/models/accordion.model';
 import { PawsModal } from './paws-modal.model';
 import { PawsModalType } from './paws-modal-type.enum';
+import { BaseAccordionElement } from '../../../shared/models/base-accordion-element.model';
 
 
 export class PawsModalService {
@@ -27,8 +27,8 @@ export class PawsModalService {
         `;
     }
 
-    private getFaqModalText(): AccordionModel[] {
-        let FAQPanels: AccordionModel[] = [
+    private getFaqModalText(): BaseAccordionElement[] {
+        let FAQPanels: BaseAccordionElement[] = [
             {
                 header: "Do you allow walk-ins?",
                 innerContent: `
