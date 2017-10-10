@@ -8,6 +8,7 @@ export class ScrollSpyDirective implements DoCheck {
 
   private elements = [];
   private currentActiveLink;
+  private isDoneLoading: boolean = false;
 
 
   constructor( @Inject(DOCUMENT) private document: Document,
@@ -28,7 +29,7 @@ export class ScrollSpyDirective implements DoCheck {
         return;
       }
     });
-  } 
+  }
 
   private resetCurrentLink(): void {
     if (!this.currentActiveLink) {
@@ -45,33 +46,39 @@ export class ScrollSpyDirective implements DoCheck {
 
 
   private collectIds(): void {
-    let elements: ElementRef[] = this.el.nativeElement.querySelectorAll('a');
+    if (!this.isDoneLoading) {
 
-    if (!this.currentActiveLink) {
-      this.currentActiveLink = elements[0];
-    }
-
-    elements.forEach(elem => {
-      let id = ScrollSpyDirective.getId(elem);
-      if (id) {
-        let destination = this.resolveDestination(id);
-
-        if (destination) {
-          let isUnique = this.elements.some((element) => {
-            return element.id === id;
-          });
-
-          if (!isUnique) {
-            this.elements.push({
-              id: id,
-              link: elem,
-              destination: destination
-            });
-          }
-        }
+      if (this.elements.length >= 4) {
+        this.isDoneLoading = true;
       }
 
-    });
+      let elements: ElementRef[] = this.el.nativeElement.querySelectorAll('a');
+
+      if (!this.currentActiveLink) {
+        this.currentActiveLink = elements[0];
+      }
+
+      elements.forEach(elem => {
+        let id = ScrollSpyDirective.getId(elem);
+        if (id) {
+          let destination = this.resolveDestination(id);
+
+          if (destination) {
+            let isUnique = this.elements.some((element) => {
+              return element.id === id;
+            });
+
+            if (!isUnique) {
+              this.elements.push({
+                id: id,
+                link: elem,
+                destination: destination
+              });
+            }
+          }
+        }
+      });
+    }
   }
 
 
