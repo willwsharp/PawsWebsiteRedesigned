@@ -1,22 +1,22 @@
-<h1 md-dialog-title>{{ modal.title }}</h1>
-<div md-dialog-content>
+<h1 mat-dialog-title>{{ modal.title }}</h1>
+<div mat-dialog-content>
     <p *ngIf="isBaseModal else faqModal">
         {{ modal.content }}
     </p>
 </div>
-<div md-dialog-actions>
+<div mat-dialog-actions>
   <!-- floats close button to the right -->
   <span style="flex: 1 1 auto;"></span>
-  <button md-raised-button md-dialog-close tabindex="2">Close</button>
+  <button mat-raised-button mat-dialog-close tabindex="2">Close</button>
 </div>
 
 <ng-template #faqModal>
-    <md-accordion>
-        <md-expansion-panel *ngFor="let accordionPanel of modal.content">
-            <md-expansion-panel-header>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let accordionPanel of modal.content">
+            <mat-expansion-panel-header>
                 {{ accordionPanel.header}}
-            </md-expansion-panel-header>
+            </mat-expansion-panel-header>
                 {{ accordionPanel.innerContent}}
-        </md-expansion-panel>
-    </md-accordion>
+        </mat-expansion-panel>
+    </mat-accordion>
 </ng-template>
