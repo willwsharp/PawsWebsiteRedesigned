@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { PawsModalComponent } from './paws-modals/paws-modal.component';
 
 @Component({
@@ -10,12 +10,12 @@ import { PawsModalComponent } from './paws-modals/paws-modal.component';
 })
 export class ModalContainerComponent {
 
-  constructor(private mdDialog: MdDialog) { }
+  constructor(private matDialog: MatDialog) { }
 
   openDialog(dialogName: string): void {
     let dialogRef;
     if (dialogName) {
-      dialogRef = this.mdDialog.open(PawsModalComponent, {
+      dialogRef = this.matDialog.open(PawsModalComponent, {
         height: 'auto',
         width: 'auto',
         data: { modalName: dialogName }
