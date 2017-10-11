@@ -1,16 +1,9 @@
 .responsive-service-cards mat-icon {
     height: auto;
     width: auto;
-    font-size: 50x;
+    font-size: 50px;
 }
 
-@media screen and (min-width: 1170px) {
-    .responsive-service-cards mat-icon {
-        height: auto;
-        width: auto;
-        font-size: 100px;
-    }
-}
 
 @media screen and (min-width: 992px) {
     .responsive-service-cards mat-icon {
@@ -20,18 +13,10 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1170px) {
     .responsive-service-cards mat-icon {
         height: auto;
         width: auto;
-        font-size: 50px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .responsive-service-cards mat-icon {
-        height: auto;
-        width: auto;
-        font-size: 50px;
+        font-size: 100px;
     }
 }

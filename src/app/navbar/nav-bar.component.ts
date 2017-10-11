@@ -5,7 +5,10 @@ import { PageScrollConfig } from 'ng2-page-scroll';
 @Component({
     moduleId: module.id,
     selector: 'nav-bar',
-    templateUrl: 'nav-bar.component.html'
+    templateUrl: 'nav-bar.component.html',
+    styleUrls: [
+        './nav-bar.component.css'
+    ]
 })
 export class NavBarComponent implements AfterViewInit {
     //set image min-height
