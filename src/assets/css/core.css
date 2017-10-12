@@ -46,12 +46,12 @@ a:visited {
     border-bottom: 1px solid lightgrey;
 }
 
-#top{
+/* #top{
     background: url('../images/top.jpg') no-repeat 50% 50% fixed;
     background-size: cover;
     -webkit-background-size: cover;
     height: 100%;
-}
+} */
 
 #float-navbar-right {
     float: right;
@@ -59,13 +59,6 @@ a:visited {
     font-size: 18px;
 }
 
-.paws-logo {
-    font-size: 26px;
-    text-align: center;
-    height: 100%;
-    display: inline-block;
-    padding: 3px;
-}
 .active {
     position: relative;
 }

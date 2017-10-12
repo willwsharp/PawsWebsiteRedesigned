@@ -1,6 +1,5 @@
-import { Component, AfterViewInit, Output, Renderer2, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, Output, Renderer2, ElementRef, Inject } from '@angular/core';
 import { PageScrollConfig } from 'ng2-page-scroll';
-
 
 @Component({
     moduleId: module.id,
@@ -12,7 +11,9 @@ import { PageScrollConfig } from 'ng2-page-scroll';
 })
 export class NavBarComponent implements AfterViewInit {
     //set image min-height
-    public minImgHeight: number = 79;
+    public minImgHeight: number =79;
+
+    constructor() {};
 
     ngAfterViewInit() {
         //ng2-page-scroll configuration

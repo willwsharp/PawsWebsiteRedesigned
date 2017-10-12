@@ -1,15 +1,51 @@
-.nav.navbar-nav li {
-    width: 114.27px;
+.paws-brand-container {
+    height: 100%;
+    padding: 3px;
+}
+
+.responsive-paws-logo {
+    height: auto;
+    width: auto;
+    min-height: 79px;
 }
 
 @media screen and (min-width: 768px) {
     #float-navbar-right {
-        margin-right: -70px;
+        margin-right: -95px;
+    }
+
+    .responsive-paws-logo {
+        width: 270px;
+        margin-left: 10px;
+    }
+
+    .navbar > .container .navbar-brand {
+        margin-left: -115px;
     }
 }
 
+
 @media screen and (min-width: 992px) {
     #float-navbar-right {
-        margin-right: 0px;
+        margin-right: 5px;
+    }
+
+    .responsive-paws-logo {
+        width: 275;
+    }
+
+    .navbar > .container .navbar-brand {
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .responsive-paws-logo {
+        width: auto;
+    }
+
+    #float-navbar-right {
+        margin-right: 25px;
     }
 }
