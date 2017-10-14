@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Output, Renderer2, ElementRef, Inject } from '@angular/core';
+import { Component, AfterViewInit, Output, Renderer2, ElementRef, Inject, ViewEncapsulation } from '@angular/core';
 import { PageScrollConfig } from 'ng2-page-scroll';
 
 @Component({
@@ -7,7 +7,8 @@ import { PageScrollConfig } from 'ng2-page-scroll';
     templateUrl: 'nav-bar.component.html',
     styleUrls: [
         './nav-bar.component.css'
-    ]
+    ],
+    encapsulation: ViewEncapsulation.None
 })
 export class NavBarComponent implements AfterViewInit {
     //set image min-height
@@ -35,6 +36,7 @@ export class NavBarComponent implements AfterViewInit {
     }
 
     public changeCurrentTabIndex(newIndex: number) : void {
+        console.log('new tab index: ' + newIndex);
         this.currentTabIndex = newIndex;
     }
 }
