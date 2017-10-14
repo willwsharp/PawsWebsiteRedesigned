@@ -11,8 +11,9 @@ import { PageScrollConfig } from 'ng2-page-scroll';
 })
 export class NavBarComponent implements AfterViewInit {
     //set image min-height
-    public minImgHeight: number =79;
+    public minImgHeight: number = 79;
 
+    public currentTabIndex: number = 0;
     constructor() {};
 
     ngAfterViewInit() {
@@ -31,5 +32,9 @@ export class NavBarComponent implements AfterViewInit {
                 return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
             }
         }
+    }
+
+    public changeCurrentTabIndex(newIndex: number) : void {
+        this.currentTabIndex = newIndex;
     }
 }

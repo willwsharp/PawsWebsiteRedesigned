@@ -1,8 +1,9 @@
-import { Directive, Inject, Renderer2, ElementRef, HostListener, DoCheck } from '@angular/core';
+import { Directive, Inject, Renderer2, ElementRef, HostListener, DoCheck, Output, EventEmitter } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Directive({
-  selector: '[pawsScrollSpy]'
+  selector: '[pawsScrollSpy]',
+  outputs: ['newActiveTab']
 })
 export class ScrollSpyDirective implements DoCheck {
 
@@ -10,10 +11,14 @@ export class ScrollSpyDirective implements DoCheck {
   private currentActiveLink;
   private isDoneLoading: boolean = false;
 
+  private currentTabIndex: number = 0;
+
+  @Output() newActiveTab: EventEmitter<number> = new EventEmitter<number>();
+
 
   constructor( @Inject(DOCUMENT) private document: Document,
     private el: ElementRef,
-    private renderer2: Renderer2) { }
+    private renderer2: Renderer2) {}
 
   public ngDoCheck(): void {
     this.collectIds();
@@ -21,11 +26,12 @@ export class ScrollSpyDirective implements DoCheck {
 
   @HostListener("window:scroll", ['$event'])
   onwindowScroll() {
-    this.elements.forEach((elem) => {
+    this.elements.forEach((elem, index) => {
       let top = elem.destination.getBoundingClientRect().top;
       if (top >= 0 && top <= 100) {
-        this.resetCurrentLink();
-        this.setActiveLink(elem.link);
+        //this.resetCurrentLink();
+        //this.setActiveLink(elem.link);
+        this.newActiveTab.emit(index);
         return;
       }
     });
@@ -36,12 +42,12 @@ export class ScrollSpyDirective implements DoCheck {
       return;
     }
 
-    this.renderer2.removeClass(this.currentActiveLink.parentElement, 'active');
+    this.renderer2.removeClass(this.currentActiveLink, 'mat-tab-label-active');
   }
 
   private setActiveLink(elem): void {
     this.currentActiveLink = elem;
-    this.renderer2.addClass(this.currentActiveLink.parentElement, 'active');
+    this.renderer2.addClass(this.currentActiveLink, 'mat-tab-label-active');
   }
 
 
@@ -52,14 +58,14 @@ export class ScrollSpyDirective implements DoCheck {
         this.isDoneLoading = true;
       }
 
-      let elements: ElementRef[] = this.el.nativeElement.querySelectorAll('a');
+      let elements: ElementRef[] = this.el.nativeElement.querySelectorAll('div.mat-tab-label');
 
       if (!this.currentActiveLink) {
         this.currentActiveLink = elements[0];
       }
 
       elements.forEach(elem => {
-        let id = ScrollSpyDirective.getId(elem);
+        let id = ScrollSpyDirective.createId(elem);
         if (id) {
           let destination = this.resolveDestination(id);
 
@@ -92,14 +98,15 @@ export class ScrollSpyDirective implements DoCheck {
     return destination;
   }
 
-  private static getId(elem): string {
-    let href: string = elem.getAttribute('href');
-
-    if (!href) {
+  //for the time being, I am constrained to using the label for the mat-tab until I find
+  //a more custom way of setting the target... this will have to do
+  private static createId(elem: any): string {
+    let label: string = elem.innerText;
+    if (!label) {
       return null;
     }
-
-    return href.replace('#', '');
+    
+    return label.replace('#', '').toLowerCase();
   }
 
 }
