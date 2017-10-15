@@ -11,11 +11,13 @@ import { PageScrollConfig } from 'ng2-page-scroll';
     encapsulation: ViewEncapsulation.None
 })
 export class NavBarComponent implements AfterViewInit {
-    //set image min-height
+    //set image min-height in pixels, good to have this hard coded here so we can reference it later
     public minImgHeight: number = 79;
 
     public currentTabIndex: number = 0;
-    constructor() {};
+
+    //stores whether the click-triggered scroll has finished or not.
+    public currentlyScrolling: boolean = true;
 
     ngAfterViewInit() {
         //ng2-page-scroll configuration
@@ -36,7 +38,6 @@ export class NavBarComponent implements AfterViewInit {
     }
 
     public changeCurrentTabIndex(newIndex: number) : void {
-        console.log('new tab index: ' + newIndex);
         this.currentTabIndex = newIndex;
     }
 }

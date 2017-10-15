@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top paws-navbar" id="mainNavBar" role="navigation" pawsNavbarEnlarge pawsScrollSpy (newActiveTab)="changeCurrentTabIndex($event)">
+<nav class="navbar navbar-default navbar-fixed-top paws-navbar" id="mainNavBar" role="navigation" pawsNavbarEnlarge pawsScrollSpy [disableWhen]="currentlyScrolling" (newActiveTab)="changeCurrentTabIndex($event)">
   <div class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -12,8 +12,7 @@
       </div>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse" pawsScrollTo>
+    <div class="collapse navbar-collapse" id="navbar-collapse" pawsScrollTo (nowScrollingEvent)="currentlyScrolling = $event">
       <mat-tab-group class="nav navbar-nav" id="float-navbar-right" [selectedIndex]="currentTabIndex">
         <mat-tab label="Home"></mat-tab>
         <mat-tab label="About"></mat-tab>
