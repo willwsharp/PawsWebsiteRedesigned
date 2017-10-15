@@ -1,0 +1,6 @@
+#home {
+    background: url('../../assets/images/top.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100%;
+}

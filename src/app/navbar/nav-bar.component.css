@@ -1,0 +1,70 @@
+.paws-brand-container {
+    height: 100%;
+    padding: 3px;
+}
+
+.responsive-paws-logo {
+    height: auto;
+    width: auto;
+    min-height: 79px;
+}
+
+#float-navbar-right {
+    margin-top: 15px;
+    float: right;
+}
+
+/* .mat-tab-label {
+    min-width: 50px !important;
+} */
+
+@media screen and (min-width: 768px) {
+    .responsive-paws-logo {
+        width: 270px;
+    }
+
+    .navbar > .container .navbar-brand {
+        margin-left: -16px;
+    }
+
+    .mat-tab-label {
+        min-width: 114px !important; 
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .responsive-paws-logo {
+        width: auto;
+        margin-left: -15px;
+    }
+
+    .navbar > .container .navbar-brand {
+        margin-left: 0px;
+    }
+    
+    .mat-tab-label {
+        min-width: 145px !important; 
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .responsive-paws-logo {
+        width: auto;
+    }
+
+    .mat-tab-label {
+        min-width: 160px !important; 
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    #float-navbar-right {
+        margin-right: 0px;
+    }
+
+    .mat-tab-label {
+        min-width: 160px !important; 
+    }
+}
