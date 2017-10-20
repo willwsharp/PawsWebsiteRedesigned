@@ -2,19 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="mat-display-2">Resources</div>
-                <div class="panel-text">
+                <div class="mat-display-2" pawsAnimateOnScroll fadeFrom="right">Resources</div>
+                <div class="panel-text" pawsAnimateOnScroll fadeFrom="left">
                     <mat-accordion>
                         <mat-expansion-panel *ngFor="let accordionPanel of accordionPanels">
                             <mat-expansion-panel-header>
                                 <span style="font-size: 18px;"> {{accordionPanel.header}}</span>
                             </mat-expansion-panel-header>
-                            <ul>
-                                <li *ngFor="let resourceLink of accordionPanel.innerContent">
-                                    <a [attr.href]="resourceLink.linkDest"
-                                    target=_blank>{{resourceLink.linkText}}</a>
-                                </li>
-                            </ul>
+                            <mat-nav-list>
+                                <a mat-list-item *ngFor="let resourceLink of accordionPanel.innerContent"
+                                   [attr.href]="resourceLink.linkDest" target=_blank>
+                                    {{resourceLink.linkText}}
+                                    <mat-icon style="position: relative; left: 5px;">exit_to_app</mat-icon>
+                                </a>
+                            </mat-nav-list>
                         </mat-expansion-panel>
                     </mat-accordion>
                 </div>
