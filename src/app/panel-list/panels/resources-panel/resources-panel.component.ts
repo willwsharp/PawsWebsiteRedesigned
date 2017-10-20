@@ -166,7 +166,7 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://www.rrcsb.org/'
                     },
                     {
-                        linkText: 'Guardianship F.A.Q. - Frequently Asked Questions about The Arc\'s Guardianship program',
+                        linkText: 'The Arc\'s Guardianship program F.A.Q.',
                         linkDest: 'http://www.thearcofnova.org/programs/info-referral/guardianship/guardianship-f-a-q/'
                     },
                     {

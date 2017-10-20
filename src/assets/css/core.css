@@ -82,3 +82,24 @@ a:visited {
     position: relative;
     text-align: justify;
 }
+
+.fade-from-right {
+    transition: all .7s ease-in-out;
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
+}
+
+.fade-from-left {
+    transition: all .7s ease-in-out;
+    transform: translate3d(-20px, 0, 0);
+    opacity: 0;
+}
+
+.scroll-animated {
+    transform: translate3d(0px, 0, 0);
+    opacity: 1;
+}
+
+#resources .mat-list-item:hover {
+    background: rgba(0, 0, 0, .06);
+}
