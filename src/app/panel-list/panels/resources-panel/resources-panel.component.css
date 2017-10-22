@@ -1,0 +1,11 @@
+#resources .mat-nav-list {
+    text-align: left;
+}
+
+
+@media screen and (max-width: 767px) {    
+    #resources .mat-list-item {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
