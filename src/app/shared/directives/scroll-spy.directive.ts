@@ -32,7 +32,6 @@ export class ScrollSpyDirective implements DoCheck {
   @HostListener("window:scroll", ['$event'])
   onwindowScroll($event) {
     if (!this.isDisabled) {
-      console.log($event);
       this.elements.forEach((elem, index) => {
         let top = elem.destination.getBoundingClientRect().top;
         if (top >= 0 && top <= 100) {

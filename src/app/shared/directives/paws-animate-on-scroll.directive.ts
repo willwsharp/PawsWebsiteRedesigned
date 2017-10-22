@@ -7,28 +7,14 @@ export class PawsAnimateOnScroll implements OnInit {
 
     private alreadyAnimated: boolean = false;
 
-    @Input() fadeFrom: 'right' | 'left' | 'top' | 'bottom';
+    @Input() fadeFrom: 'right' | 'left' | 'top' | 'bottom' = 'right';
+    @Input() trigger: 'partial' | 'full' = 'full';
 
     constructor(private elem: ElementRef,
                 private renderer: Renderer2) {}
 
     ngOnInit() {
-        let directionPrefix = '';
-        switch(this.fadeFrom) {
-            case 'right':
-            directionPrefix = 'right';
-            break;
-            case 'left':
-            directionPrefix = 'left';
-            break;
-            case 'top':
-            directionPrefix = 'top';
-            break;
-            case 'bottom':
-            directionPrefix = 'bottom';
-            break;
-        }
-        this.renderer.addClass(this.elem.nativeElement, 'fade-from-'+directionPrefix);
+        this.renderer.addClass(this.elem.nativeElement, 'fade-from-' + this.fadeFrom);
         if (this.shouldAnimate()) {
             this.animate();
         }
@@ -43,9 +29,13 @@ export class PawsAnimateOnScroll implements OnInit {
         let bottom = boundary.bottom;
         let height = boundary.height;
 
-        let isPartiallyVisible = ((top >= 0) && (bottom <= (window.innerHeight - 50)));
-
-        if (isPartiallyVisible) {
+        let isFullyVisible = ((top >= 0) && (bottom <= (window.innerHeight + 125)));
+        
+        if (this.trigger === 'partial' && 
+            (((height/2) + window.innerHeight >= bottom))) {
+            result = true;
+        } else if (this.trigger === 'full' && 
+            ((top >= 0) && (bottom <= (window.innerHeight - 50)))) {
             result = true;
         }
 
