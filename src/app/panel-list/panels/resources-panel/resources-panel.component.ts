@@ -4,7 +4,10 @@ import { ResourceAccordion } from "./resource-accordion.model";
 
 @Component({
     selector: 'paws-resources-panel',
-    templateUrl: './resources-panel.component.html'
+    templateUrl: './resources-panel.component.html',
+    styleUrls: [
+        './resources-panel.component.css'
+    ]
 })
 export class ResourcesPanelComponent implements OnInit {
     public accordionPanels: ResourceAccordion[];
