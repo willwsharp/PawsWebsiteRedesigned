@@ -3,7 +3,6 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
@@ -12,10 +11,7 @@ html {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
+a,
 a:hover,
 a:focus,
 a:active,
@@ -47,62 +43,7 @@ a:visited {
     border-bottom: 1px solid lightgrey;
 }
 
-#top{
-    background: url('../images/top.jpg') no-repeat 50% 50% fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    height: 100%;
-}
 
-#float-navbar-right {
-    float: right;
-    text-align: center;
-    font-size: 18px;
-}
-
-#float-navbar-right li {
-    /* width: 101px; */
-}
-
-.paws-logo {
-    font-size: 26px;
-    text-align: center;
-    height: 100%;
-    display: inline-block;
-    padding: 3px;
-}
-
-.full-name {
-    margin: 0 0 -3px;
-    color: black;
-}
-
-.full-title {
-    font-size: 16px;
-    color: black;
-}
-
-.active {
-    position: relative;
-}
-
-li.active::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    bottom: 0;
-    left: 0%;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid black;
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: black;
-    background-color: white;
-}
 
 .reset-scroll {
     float: right;
@@ -142,113 +83,23 @@ li.active::after {
     text-align: justify;
 }
 
-.fade-in {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-fill-mode: forwards;
+.fade-from-right {
+    transition: all .7s ease-in-out;
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
 }
 
-.fade-out {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
-    -webkit-animation-fill-mode: forwards;
+.fade-from-left {
+    transition: all .7s ease-in-out;
+    transform: translate3d(-20px, 0, 0);
+    opacity: 0;
 }
 
-.read-more-btn {
-    bottom: 5px;
+.scroll-animated {
+    transform: translate3d(0px, 0, 0);
+    opacity: 1;
 }
 
-.toggle-more-details {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
-.toggle-more-details:hover {
-    text-decoration: none;
-    color:black;
-    font-size: 20px;
-}
-
-.invert-element-down {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-name: invertDown;
-    animation-name: invertDown;
-    -webkit-animation-fill-mode: forwards;
-}
-
-.invert-element-up {
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
-    -webkit-animation-name: invertUp;
-    animation-name: invertUp;
-    -webkit-animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes invertDown {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform:rotate(180deg);
-        transform: rotate(180deg);
-    }
-}
-
-@-webkit-keyframes invertUp {
-    0% {
-        -webkit-transform: rotate(-180deg);
-        transform: rotate(-180deg);
-    }
-    100% {
-        -webkit-transform:rotate(0deg);
-        transform: rotate(0deg);
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .5;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.paws-footer {
-    min-height: 21.5%;
-    background-color: cornflowerblue;
-    color: white;
-    font-size: 11px;
-}
-
-.paws-footer-links {
-    color: white;
-    text-decoration: none;
-}
-
-.additionalInfo {
-    margin-top: 20px;
+#resources .mat-list-item:hover {
+    background: rgba(0, 0, 0, .06);
 }
