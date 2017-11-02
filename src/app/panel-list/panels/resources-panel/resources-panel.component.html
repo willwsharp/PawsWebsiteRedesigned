@@ -1,24 +1,27 @@
-<md-card id="resources" class="custom-panel">
+<mat-card id="resources" class="custom-panel">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Resources</h1>
-                <div class="panel-text">
-                    <md-accordion>
-                        <md-expansion-panel *ngFor="let accordionPanel of accordionPanels">
-                            <md-expansion-panel-header>
+                <div class="mat-display-3" pawsAnimateOnScroll fadeFrom="right">Resources</div>
+                <div class="panel-text" pawsAnimateOnScroll fadeFrom="left">
+                    <mat-accordion>
+                        <mat-expansion-panel *ngFor="let accordionPanel of accordionPanels">
+                            <mat-expansion-panel-header>
                                 <span style="font-size: 18px;"> {{accordionPanel.header}}</span>
-                            </md-expansion-panel-header>
-                            <ul>
-                                <li *ngFor="let resourceLink of accordionPanel.innerContent">
-                                    <a [attr.href]="resourceLink.linkDest"
-                                    target=_blank>{{resourceLink.linkText}}</a>
-                                </li>
-                            </ul>
-                        </md-expansion-panel>
-                    </md-accordion>
+                            </mat-expansion-panel-header>
+                            <mat-nav-list>
+                                <a mat-list-item 
+                                *ngFor="let resourceLink of accordionPanel.innerContent"
+                                [attr.href]="resourceLink.linkDest" target=_blank>
+                                    {{resourceLink.linkText}}
+                                    <span style="flex: 1 1 auto"></span>
+                                    <mat-icon style="position: relative; left: 5px;">link</mat-icon>
+                                </a>
+                            </mat-nav-list>
+                        </mat-expansion-panel>
+                    </mat-accordion>
                 </div>
             </div>
         </div>
     </div>
-</md-card>
+</mat-card>

@@ -1,0 +1,38 @@
+.responsive-service-cards mat-icon {
+    height: auto;
+    width: auto;
+    font-size: 50px;
+}
+
+#BusinessCard, #RealEstateCard {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 767px) {
+    .responsive-service-cards mat-icon {
+        height: auto;
+        width: auto;
+        font-size: 75px;
+    }
+
+    #BusinessCard, #RealEstateCard {
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .responsive-service-cards mat-icon {
+        height: auto;
+        width: auto;
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .responsive-service-cards mat-icon {
+        height: auto;
+        width: auto;
+        font-size: 100px;
+    }
+}

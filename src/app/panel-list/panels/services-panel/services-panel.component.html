@@ -1,25 +1,61 @@
-<md-card id="services" class="custom-panel" [class.bottom-separator]="shouldHaveSeparator">
+<mat-card id="services" class="custom-panel" [class.bottom-separator]="shouldHaveSeparator">
     <div class="container">
+        <div class="row responsive-service-cards">
+            <div class="mat-display-3" pawsAnimateOnScroll fadeFrom="left">Services</div>
+            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
+                <mat-card>
+                    <mat-icon>attach_money</mat-icon>
+                    <hr>
+                    <mat-card-content>
+                        <span class="mat-title">Estate Planning</span>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="RealEstateCard">
+                <mat-card>
+                    <mat-icon>home</mat-icon>
+                    <hr>
+                    <mat-card-content>
+                        <span class="mat-title">Real Estate</span>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <br>
+        <div class="row responsive-service-cards">
+            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
+                <mat-card>
+                    <!-- TODO: maybe need better icon for this? -->
+                    <mat-icon>child_friendly</mat-icon>
+                    <hr>
+                    <mat-card-content>
+                           <span class="mat-title">Guardianships</span>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="BusinessCard">
+                <mat-card>
+                    <mat-icon>business</mat-icon>
+                    <hr>
+                    <mat-card-content>
+                            <span class="mat-title">Business Affairs</span>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <br>
         <div class="row">
-            <div class="col-xs-12">
-                <h1>Services</h1>
-                <div class="panel-text">
-                    <p>
-                        Ms. Woodward is engaged in a general practice of law. Her areas of practice include:
-                    </p>
-                    <ul>
-                        <li>Estate Planning</li>
-                        <li>Estate Administration</li>
-                        <li>Real Estate matters including sales, purchases and refinances</li>
-                        <li>Real Estate Partition Actions</li>
-                        <li>Guardianships and Conservatorships</li>
-                        <li>Creation of corporations, limited liability companies, partnerships and other business matters</li>
-                    </ul>
-                    <p>
-                        For Business, Lititgation, and Family Law contact <a href="http://www.csadlawyers.com/" target="_blank">Culin, Sharp, Autry & Day</a>
-                    </p>
-                </div>
+            <div class="col-xs-12" pawsAnimateOnScroll fadeFrom="right">
+                <mat-card>
+                    <span class="mat-subheading-2" style="font-size: 15px;">
+                        For Business, Litigation and Family Law, contact
+                        <a href="http://www.csadlawyers.com/" target=_blank>
+                            Culin, Sharp, Autry & Day
+                            <mat-icon style="position: relative; top: 7px;">link</mat-icon>
+                        </a>
+                </span>
+                </mat-card>
             </div>
         </div>
     </div>
-</md-card>
+</mat-card>

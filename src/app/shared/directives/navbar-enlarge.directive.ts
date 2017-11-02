@@ -1,6 +1,6 @@
 import { Directive, Renderer2, ElementRef, HostListener, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 @Directive({
   selector: '[pawsNavbarEnlarge]'
@@ -12,15 +12,15 @@ export class NavbarEnlargeDirective implements OnInit {
   constructor(private renderer: Renderer2,
     private elem: ElementRef,
     @Inject(DOCUMENT) private document: Document,
-    private mdDialog: MdDialog) { }
+    private matDialog: MatDialog) { }
 
 
   ngOnInit() {
-    this.mdDialog.afterOpen.subscribe(() => {
+    this.matDialog.afterOpen.subscribe(() => {
       this.isModalOpen = true;
     })
 
-    this.mdDialog.afterAllClosed.subscribe(() => {
+    this.matDialog.afterAllClosed.subscribe(() => {
       this.isModalOpen = false;
     })
   }

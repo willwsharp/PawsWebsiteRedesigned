@@ -4,7 +4,10 @@ import { ResourceAccordion } from "./resource-accordion.model";
 
 @Component({
     selector: 'paws-resources-panel',
-    templateUrl: './resources-panel.component.html'
+    templateUrl: './resources-panel.component.html',
+    styleUrls: [
+        './resources-panel.component.css'
+    ]
 })
 export class ResourcesPanelComponent implements OnInit {
     public accordionPanels: ResourceAccordion[];
@@ -166,7 +169,7 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://www.rrcsb.org/'
                     },
                     {
-                        linkText: 'Guardianship F.A.Q. - Frequently Asked Questions about The Arc\'s Guardianship program',
+                        linkText: 'The Arc\'s Guardianship program F.A.Q.',
                         linkDest: 'http://www.thearcofnova.org/programs/info-referral/guardianship/guardianship-f-a-q/'
                     },
                     {
@@ -204,7 +207,7 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://money.cnn.com/magazines/moneymag/money101/lesson8/index4.htm'
                     },
                     {
-                        linkText: 'How to Choose a REALTOR&#174;',
+                        linkText: 'How to Choose a REALTOR',
                         linkDest: 'http://www.realtor.com/basics/buy/looking/realtor.asp?source=web'
                     },
                     {
@@ -216,20 +219,20 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'https://nvar.com/'
                     }
                 ]
-            },
-            {
-                header: 'Mobile Apps',
-                innerContent: [
-                    {
-                        linkText: '"My Health Care Wishes" Lite - Apple',
-                        linkDest: 'https://itunes.apple.com/us/app/my-health-care-wishes-lite/id853612365?mt=8'
-                    },
-                    {
-                        linkText: '"My Health Care Wishes" Lite - Goolge Play',
-                        linkDest: 'https://play.google.com/store/apps/details?id=com.AmericanBar.MyHeralthCareWishesLite'
-                    }
-                ]
             }
+            // {
+            //     header: 'Mobile Apps',
+            //     innerContent: [
+            //         {
+            //             linkText: '"My Health Care Wishes" Lite - Apple',
+            //             linkDest: 'https://itunes.apple.com/us/app/my-health-care-wishes-lite/id853612365?mt=8'
+            //         },
+            //         {
+            //             linkText: '"My Health Care Wishes" Lite - Google Play',
+            //             linkDest: 'https://play.google.com/store/apps/details?id=com.AmericanBar.MyHeralthCareWishesLite'
+            //         }
+            //     ]
+            // }
         ]
     }
 }
