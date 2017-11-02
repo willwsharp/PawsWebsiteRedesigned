@@ -17,7 +17,7 @@ export class NavBarComponent implements AfterViewInit {
     public currentTabIndex: number = 0;
 
     //stores whether the click-triggered scroll has finished or not.
-    public currentlyScrolling: boolean = true;
+    public currentlyScrolling: boolean = false;
 
     ngAfterViewInit() {
         //ng2-page-scroll configuration
