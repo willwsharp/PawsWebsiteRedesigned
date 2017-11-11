@@ -1,4 +1,4 @@
-import { Directive, Renderer2, ElementRef, HostListener, Inject, OnInit, DoCheck, Output, EventEmitter } from '@angular/core';
+import { Directive, Renderer2, ElementRef, HostListener, Inject, OnInit, DoCheck, Output, EventEmitter, Input } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
@@ -11,6 +11,8 @@ export class PawsScrollTo implements DoCheck {
   private elements = [];
   private nowScrolling: boolean = false;
   private hasScrollFinished: EventEmitter<boolean> = new EventEmitter();
+
+  @Input('querySelector') querySelector: string = 'div';
 
   @Output() nowScrollingEvent: EventEmitter<boolean> = new EventEmitter();
 
@@ -26,8 +28,7 @@ export class PawsScrollTo implements DoCheck {
   }
 
   private collectTabElements() {
-    this.elements = this.elem.nativeElement.querySelectorAll('div.mat-tab-label');
-
+    this.elements = this.elem.nativeElement.querySelectorAll(this.querySelector);
     //this is super janky... but it does work... take that angular material 2 team!
     this.elements.forEach((elem) => {
       this.renderer.listen(elem, "click", (event) => {

@@ -1,6 +1,13 @@
-<button mat-icon-button class="navbar-toggle collapsed" 
-    
+<button 
+    mat-icon-button
+    (click)="openSideNav()"
+    class="navbar-toggle collapsed"
     aria-expanded="false"
-    style="float: left; margin-left: 10px;">
-    <mat-icon class="md-24">menu</mat-icon>
+    style="float: left; margin-left: 10px; top: 25px;">
+    <mat-icon 
+        class="md-24" 
+        style="position: relative; font-size: 30px; right: 3px;"
+    >
+        menu
+    </mat-icon>
 </button>

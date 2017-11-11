@@ -1,13 +1,24 @@
-<nav class="navbar navbar-default navbar-fixed-top paws-navbar" id="mainNavBar" role="navigation" pawsNavbarEnlarge pawsScrollSpy [disableWhen]="currentlyScrolling" (newActiveTab)="changeCurrentTabIndex($event)">
+<nav 
+  class="navbar navbar-default navbar-fixed-top paws-navbar"
+  style="z-index: 1000 !important;"
+  id="mainNavBar" 
+  role="navigation"
+  pawsNavbarEnlarge 
+  pawsScrollSpy 
+  [disableWhen]="currentlyScrolling" 
+  (newActiveTab)="changeCurrentTabIndex($event)"
+>
   <div class="container">
     <div class="navbar-header page-scroll">
-      <paws-mobile-navbar></paws-mobile-navbar>
+      <paws-mobile-navbar [currentIndex]="currentTabIndex"></paws-mobile-navbar>
       <div class="navbar-brand paws-brand-container">
         <img class="responsive-paws-logo" src="../../assets/images/PawsLogo.png">
       </div>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse" pawsScrollTo 
+    <div class="collapse navbar-collapse" id="navbar-collapse" 
+    pawsScrollTo 
+    [querySelector]="'div.mat-tab-label'"
     (nowScrollingEvent)="currentlyScrolling = $event">
       <mat-tab-group class="nav navbar-nav" id="float-navbar-right" 
       [selectedIndex]="currentTabIndex">
