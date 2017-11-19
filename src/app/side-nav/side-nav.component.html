@@ -1,0 +1,21 @@
+<h1 mat-dialog-title style="text-align: center; position: relative; top: 8px;">Menu</h1>
+<div mat-dialog-content>
+    <div>
+        <button
+            mat-button
+            tabindex="-1"
+            *ngFor="let nav of navigationList; let index = index;" 
+            (click)="selectPanel(nav)" 
+            [ngClass]="{'active-item': isActive(index)}"
+            style="text-align: left; width: 100%; font-size: 16px;"
+        >
+            <strong>{{nav}}</strong>
+            <mat-icon 
+                matListIcon 
+                style="float: right; position: relative; top: 7px;"
+            >
+                keyboard_arrow_right
+            </mat-icon>
+        </button>
+    </div>
+</div>
