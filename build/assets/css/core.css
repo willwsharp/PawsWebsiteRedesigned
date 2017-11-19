@@ -47,13 +47,6 @@ a:visited {
     border-bottom: 1px solid lightgrey;
 }
 
-#top{
-    background: url('../images/top.jpg') no-repeat 50% 50% fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    height: 100%;
-}
-
 #float-navbar-right {
     float: right;
     text-align: center;
