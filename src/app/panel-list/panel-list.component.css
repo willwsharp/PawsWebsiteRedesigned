@@ -3,13 +3,14 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: static;
+    height: 100vh;
+    transition: height 999999s;
+}
 
-    -webkit-background: url('../../assets/images/top.jpg');
-    -webkit-background-repeat: no-repeat;
-    -webkit-background-position: 50%;
-    -webkit-background-size: cover;
-    -webkit-background-attachment: fixed;
-
-    height: 100%;
+@media screen and (min-width: 767px) {    
+    .paws-hero-img {
+        background-attachment: fixed;
+        height: 100%;
+    }
 }
