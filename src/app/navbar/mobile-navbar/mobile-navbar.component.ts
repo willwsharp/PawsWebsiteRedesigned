@@ -31,7 +31,7 @@ export class MobileNavbarComponent {
                     PageScrollInstance.newInstance({
                         document: this.document,
                         scrollTarget: dest,
-                        pageScrollOffset: 79,
+                        pageScrollOffset: 85,
                     });
 
                 this.pageScrollService.start(pageScrollInstance);

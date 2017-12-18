@@ -11,8 +11,8 @@ import { PageScrollConfig } from 'ng2-page-scroll';
     encapsulation: ViewEncapsulation.None
 })
 export class NavBarComponent implements AfterViewInit {
-    //set image min-height in pixels, good to have this hard coded here so we can reference it later
-    public minImgHeight: number = 79;
+    //set image min-height in pixels, should have this hard-coded somewhere else
+    public minImgHeight: number = 96;
 
     public currentTabIndex: number = 0;
 
@@ -20,9 +20,9 @@ export class NavBarComponent implements AfterViewInit {
     public currentlyScrolling: boolean = false;
 
     ngAfterViewInit() {
-        //ng2-page-scroll configuration
-        //can't use elementRef.nativeElement.offsetHeight 
-        //because it changes for some reason
+        // ng2-page-scroll configuration
+        // can't use elementRef.nativeElement.offsetHeight 
+        // because it changes for some reason
         PageScrollConfig.defaultScrollOffset = this.minImgHeight;
         PageScrollConfig.defaultDuration = 700;
         PageScrollConfig.defaultEasingLogic = {
