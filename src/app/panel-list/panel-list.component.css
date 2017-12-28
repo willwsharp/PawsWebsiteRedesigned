@@ -8,9 +8,63 @@
     transition: height 999999s;
 }
 
+.panel-brand-container {
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.paws-brand-img {
+    width: 90%;
+}
+
+#home {
+    height: 55%;
+    background: cornflowerblue;
+    margin-bottom: 0px;
+}
+
+
+@media screen and (min-height: 400px) {    
+    #home {
+        height: 42%;
+    }
+}
+
+@media screen and (min-height: 500px) {    
+    #home {
+        height: 36%;
+    }
+}
+
+@media screen and (min-height: 550px) {    
+    #home {
+        height: 33%;
+    }
+}
+
+@media screen and (min-height: 560px) {    
+    #home {
+        height: 30%;
+    }
+}
+
+@media screen and (min-width: 404px) {    
+    .paws-brand-img {
+        width: auto;
+    }
+}
+
 @media screen and (min-width: 767px) {    
     .paws-hero-img {
         background-attachment: fixed;
         height: 100%;
+    }
+
+    #home {
+        height: 100%; 
+        margin: 0px;
+        display: block;
     }
 }

@@ -28,11 +28,11 @@ export class NavbarEnlargeDirective implements OnInit {
   @HostListener("window:scroll")
   onScroll() {
     const collapseOffset = 50;
-
     let currentOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    let onMobileDevice = window.innerWidth < 765;
 
-    //don't do anything with the navbar if a modal is open
-    if (!this.isModalOpen) {
+    // don't do anything with the navbar if a modal is open or we're on a mobile device
+    if (!this.isModalOpen && !onMobileDevice) {
       if (currentOffset > collapseOffset) {
         this.renderer.addClass(this.elem.nativeElement, 'navbar-reduced');
       } else {

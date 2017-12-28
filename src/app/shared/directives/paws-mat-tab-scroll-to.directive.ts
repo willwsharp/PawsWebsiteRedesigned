@@ -37,7 +37,7 @@ export class PawsScrollTo implements DoCheck {
         PageScrollInstance.newInstance({
           document: this.document, 
           scrollTarget: dest,
-          pageScrollOffset: 79,
+          pageScrollOffset: 96,
           pageScrollFinishListener: this.hasScrollFinished
         });
 
