@@ -1,3 +1,11 @@
-.paws-sidenav {
-    
+button {
+    float: left;
+    margin-left: 10px;
+    top: 5px;
+}
+
+@media screen and (min-width: 767px) {    
+    button {
+        top: 25px;
+    }
 }

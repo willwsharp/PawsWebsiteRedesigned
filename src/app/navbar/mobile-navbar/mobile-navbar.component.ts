@@ -6,17 +6,29 @@ import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
     selector: 'paws-mobile-navbar',
-    templateUrl: './mobile-navbar.component.html'
+    templateUrl: './mobile-navbar.component.html',
+    styleUrls: [
+        './mobile-navbar.component.css'
+    ]
 })
 export class MobileNavbarComponent {
 
     @Input() currentIndex: number = 0;
+
+    pageScrollOffset: number;
 
     constructor(private matDialog: MatDialog,
         @Inject(DOCUMENT) private document: any,
         private pageScrollService: PageScrollService) { }
 
     public openSideNav() {
+
+        if (this.onMobileDevice()) {
+            this.pageScrollOffset = 50;
+        } else {
+            this.pageScrollOffset = 85;
+        }
+
         let dialogRef = this.matDialog.open(SideNavComponent, {
             height: 'auto',
             width: 'auto',
@@ -31,11 +43,15 @@ export class MobileNavbarComponent {
                     PageScrollInstance.newInstance({
                         document: this.document,
                         scrollTarget: dest,
-                        pageScrollOffset: 85,
+                        pageScrollOffset: this.pageScrollOffset,
                     });
 
                 this.pageScrollService.start(pageScrollInstance);
             }
         })
+    }
+
+    private onMobileDevice(): boolean {
+        return window.innerWidth < 767;
     }
 }

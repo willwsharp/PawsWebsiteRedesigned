@@ -16,4 +16,8 @@ export class PanelList implements OnInit {
     
     constructor(private panelService: PanelService) { }
 
+    public onMobileDevice(): boolean {
+        return window.innerWidth < 767;
+    }
+
 }
