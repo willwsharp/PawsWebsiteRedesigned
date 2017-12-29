@@ -3,20 +3,34 @@ import { MatDialog } from "@angular/material";
 import { SideNavComponent } from "../../side-nav/side-nav.component";
 import { PageScrollInstance, PageScrollService } from "ng2-page-scroll";
 import { DOCUMENT } from "@angular/platform-browser";
+import { AppUtil } from "../../shared/services/app-util.service";
 
 @Component({
     selector: 'paws-mobile-navbar',
-    templateUrl: './mobile-navbar.component.html'
+    templateUrl: './mobile-navbar.component.html',
+    styleUrls: [
+        './mobile-navbar.component.css'
+    ]
 })
 export class MobileNavbarComponent {
 
     @Input() currentIndex: number = 0;
 
+    pageScrollOffset: number;
+
     constructor(private matDialog: MatDialog,
         @Inject(DOCUMENT) private document: any,
-        private pageScrollService: PageScrollService) { }
+        private pageScrollService: PageScrollService,
+        private appUtil: AppUtil) { }
 
     public openSideNav() {
+
+        if (this.appUtil.onMobileDevice()) {
+            this.pageScrollOffset = 50;
+        } else {
+            this.pageScrollOffset = 85;
+        }
+
         let dialogRef = this.matDialog.open(SideNavComponent, {
             height: 'auto',
             width: 'auto',
@@ -31,7 +45,7 @@ export class MobileNavbarComponent {
                     PageScrollInstance.newInstance({
                         document: this.document,
                         scrollTarget: dest,
-                        pageScrollOffset: 79,
+                        pageScrollOffset: this.pageScrollOffset,
                     });
 
                 this.pageScrollService.start(pageScrollInstance);

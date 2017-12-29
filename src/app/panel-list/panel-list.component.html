@@ -1,6 +1,14 @@
 <!-- Intro Section -->
-<div id="home" class="panel" style="height: 100%;">
-    <div class="paws-hero-img"></div>
+<div id="home" class="custom-panel">
+    <ng-container *ngIf="appUtil.onMobileDevice(); then brandImg else heroImg"></ng-container>
+    <ng-template #heroImg>
+        <div class="paws-hero-img"></div>
+    </ng-template>
+    <ng-template #brandImg>
+        <div class="panel-brand-container">
+            <img class="paws-brand-img" src="../../assets/images/PawsLogo-white-out.png">
+        </div>
+    </ng-template>
 </div>
 
 <paws-about-panel [shouldHaveSeparator]="true"></paws-about-panel>

@@ -31,7 +31,7 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'Fauquier County Circuit Court Clerk\'s Office',
-                        linkDest: 'http://www.fauquiercounty.gov/government/departments/circuitcourt/'
+                        linkDest: 'http://www.fauquiercounty.gov/government/departments-a-g/circuit-court-clerk'
                     },
                     {
                         linkText: 'Fairfax County Circuit Court Clerk\'s Office',
@@ -55,7 +55,7 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'So You\'re 18',
-                        linkDest: 'http://www.vsb.org/docs/SY18_2013.pdf'
+                        linkDest: 'http://www.vsb.org/site/publications/sy18'
                     },
                     {
                         linkText: 'Senior Citizen\'s Handbook',
@@ -67,7 +67,7 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'Veteran Resources',
-                        linkDest: 'http://warriorcare.dodlive.mil/benefits/compensation-and-benefits/'
+                        linkDest: 'https://www.va.gov/'
                     },
                     {
                         linkText: 'American Bar Association',
@@ -109,11 +109,11 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'Fauquier County Commisioner of Account Instructions',
-                        linkDest: 'http://www.fauquiercounty.gov/forms/departments/circuitcourt/pdf/Commiss_of_Accounts_Instructs.pdf'
+                        linkDest: 'http://www.fauquiercounty.gov/government/departments-a-g/circuit-court-clerk'
                     },
                     {
                         linkText: 'Fauquier County Circuit Court Clerk\'s Office - Wills and Estates',
-                        linkDest: 'http://www.fauquiercounty.gov/government/departments/circuitcourt/index.cfm?action=willsandestates'
+                        linkDest: 'http://www.fauquiercounty.gov/government/departments-a-g/circuit-court-clerk/wills-and-estates'
                     },
                     {
                         linkText: 'Fairfax County Commissioner of Accounts website',
@@ -128,7 +128,7 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://www.loudoun.gov/index.aspx?NID=2143'
                     },
                     {
-                        linkText: 'Loudoun Circuit Court Clerk\'s Office - Probate Department',
+                        linkText: 'Loudoun Circuit Court Clerk\'s Office - Probate Division',
                         linkDest: 'http://www.loudoun.gov/index.aspx?NID=1815'
                     },
                     {
@@ -203,7 +203,7 @@ export class ResourcesPanelComponent implements OnInit {
                 header: 'Real Estate',
                 innerContent: [
                     {
-                        linkText: 'Picking a real estate agent',
+                        linkText: 'Buying a home: Buying a home in 10 steps',
                         linkDest: 'http://money.cnn.com/magazines/moneymag/money101/lesson8/index4.htm'
                     },
                     {
