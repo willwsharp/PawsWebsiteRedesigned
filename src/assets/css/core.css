@@ -31,9 +31,15 @@ a:visited {
     padding: 0px;
 }
 
+
+.menu-list-item .mat-button-wrapper {
+    display: flex;
+}
+
 paws-side-nav .mat-dialog-content {
     padding: 0px !important;
     margin: 0px !important;
+    overflow: hidden !important;
 }
 .navbar-toggle {
     display: block;
