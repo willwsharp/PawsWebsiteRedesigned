@@ -41,6 +41,16 @@ a:visited {
     }
 }
 
+@media (max-width: 768px) {
+    .custom-panel {
+        background: #d3d8de;
+    }
+}
+
+.mat-ink-bar {
+    background-color: cornflowerblue !important;
+}
+
 .panel-img-container {
     height: 100%;
     width: 100%;
@@ -52,19 +62,6 @@ a:visited {
     text-align: center;
     position: relative;
 }
-
-.bottom-separator::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    left: 20%;
-    bottom: 0;
-    height: 1px;
-    width: 60%;
-    border-bottom: 1px solid lightgrey;
-}
-
-
 
 .reset-scroll {
     float: right;

@@ -24,6 +24,7 @@
 
 .paws-navbar {
     background: #d3d8de;
+    border-color: transparent;
 }
 
 
@@ -31,6 +32,7 @@
 
     .paws-navbar {
         background: white;
+        border-bottom: 1px solid #d3d8de;
     }    
 
     .paws-brand-container {

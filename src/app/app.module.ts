@@ -27,6 +27,7 @@ import { PawsScrollTo } from './shared/directives/paws-mat-tab-scroll-to.directi
 import { PawsAnimateOnScroll } from './shared/directives/paws-animate-on-scroll.directive';
 import { MobileNavbarComponent } from './navbar/mobile-navbar/mobile-navbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { AppUtil } from './shared/services/app-util.service';
 
 // TODO: modularise this app
 @NgModule({
@@ -56,7 +57,9 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     providers: [
         PanelService,
         PawsModalService,
-        PageScrollService],
+        PageScrollService,
+        AppUtil
+    ],
     bootstrap: [RootComponent],
     entryComponents: [
         PawsModalComponent,

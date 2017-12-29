@@ -2,24 +2,58 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <h3>Contact</h3>
+                <h2>Contact</h2>
                 <div class="contact-div">
                     <!-- TODO: make sure this works in mobile -->
-                    <a class="paws-footer-links"
-                       href="https://www.google.com/maps/dir/?api=1&destination=31+South+Second+Street+Warrenton%20+Virginia&travelmode=driving">
-                        31 S. Second Street <br>
-                        Warrenton, Va 20187
-                        </a> <br>
-                    <a class="paws-footer-links" href="tel:5403471482">Tel: (540)-347-1482</a> <br>
-                    <span>Fax: (866)-876-2295</span> <br>
-                    <a class="paws-footer-links" href="mailto:pwoodward@patwoodwardlawoffice.com" target="_top">pwoodward@patwoodwardlawoffice.com</a>
+                    <a class="paws-footer-links" href="https://www.google.com/maps/dir/?api=1&destination=31+South+Second+Street+Warrenton%20+Virginia&travelmode=driving">
+                        <ng-container *ngIf="appUtil.onMobileDevice(); then addressIcon else fullAddress"></ng-container>
+                        <ng-template #addressIcon>
+                            <mat-icon class="mobile-footer-icon">
+                                directions
+                            </mat-icon>
+                        </ng-template>
+                        <ng-template #fullAddress>
+                            <span>
+                                31 S. Second Street
+                                <br> 
+                                Warrenton, Va 20187
+                            </span>
+                            <br>
+                        </ng-template>
+                    </a>
+                    <a class="paws-footer-links" href="tel:5403471482">
+                        <ng-container *ngIf="appUtil.onMobileDevice(); then telephoneIcon else fullTele"></ng-container>
+                        <ng-template #telephoneIcon>
+                            <mat-icon class="mobile-footer-icon" style="margin-left: 15px;">
+                                call
+                            </mat-icon>
+                        </ng-template>
+                        <ng-template #fullTele>
+                            Tel: (540)-347-1482
+                        </ng-template>
+                    </a>
+                    <a class="paws-footer-links" style="font-size: 13px;" href="mailto:pwoodward@patwoodwardlawoffice.com" target="_top">
+                        <ng-container *ngIf="appUtil.onMobileDevice(); then mailIcon else fullMailAddr"></ng-container>
+                        <ng-template #mailIcon>
+                            <mat-icon class="mobile-footer-icon" style="margin-left: 15px;">
+                                email
+                            </mat-icon>
+                        </ng-template>
+                        <ng-template #fullMailAddr>
+                            pwoodward@patwoodwardlawoffice.com
+                        </ng-template>
+                    </a>
+                    <br>
+                    <span>Fax: (866)-876-2295</span>
                 </div>
             </div>
-            <div class="col-sm-5">
-                <h3>Business Hours</h3>
+            <div class="col-sm-5" style="font-size: 13px;">
+                <h2>Business Hours</h2>
                 <!-- TODO: maybe make this reflect current time? -->
                 <div class="business-hours-div">
-                    <span><strong>Mon - Fri</strong> 8:00am - 12:00pm, 1:00pm - 4:30pm</span> <br>
+                    <span>
+                        <strong>Mon - Fri:</strong> 8:00am - 12:00pm, 1:00pm - 4:30pm</span>
+                    <br>
                 </div>
             </div>
             <div class="col-sm-3">

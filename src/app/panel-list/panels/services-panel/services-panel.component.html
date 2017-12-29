@@ -1,61 +1,65 @@
-<mat-card id="services" class="custom-panel" [class.bottom-separator]="shouldHaveSeparator">
+<div id="services" class="custom-panel" [class.bottom-separator]="shouldHaveSeparator">
     <div class="container">
-        <div class="row responsive-service-cards">
-            <div class="mat-display-3" pawsAnimateOnScroll fadeFrom="left">Services</div>
-            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
-                <mat-card>
-                    <mat-icon>attach_money</mat-icon>
-                    <hr>
-                    <mat-card-content>
-                        <span class="mat-title">Estate Planning</span>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="RealEstateCard">
-                <mat-card>
-                    <mat-icon>home</mat-icon>
-                    <hr>
-                    <mat-card-content>
-                        <span class="mat-title">Real Estate</span>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-        </div>
-        <br>
-        <div class="row responsive-service-cards">
-            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
-                <mat-card>
-                    <!-- TODO: maybe need better icon for this? -->
-                    <mat-icon>child_friendly</mat-icon>
-                    <hr>
-                    <mat-card-content>
-                           <span class="mat-title">Guardianships</span>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-            <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="BusinessCard">
-                <mat-card>
-                    <mat-icon>business</mat-icon>
-                    <hr>
-                    <mat-card-content>
-                            <span class="mat-title">Business Affairs</span>
-                    </mat-card-content>
-                </mat-card>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-xs-12" pawsAnimateOnScroll fadeFrom="right">
-                <mat-card>
-                    <span class="mat-subheading-2" style="font-size: 15px;">
-                        For Business, Litigation and Family Law, contact
-                        <a href="http://www.csadlawyers.com/" target=_blank>
-                            Culin, Sharp, Autry & Day
-                            <mat-icon style="position: relative; top: 7px;">link</mat-icon>
-                        </a>
-                </span>
-                </mat-card>
-            </div>
-        </div>
+        <mat-card style="margin-top: 15px;">
+            <mat-card-content>
+                <div class="mat-display-3" pawsAnimateOnScroll fadeFrom="left">Services</div>
+                <div class="row responsive-service-cards">
+                    <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
+                        <mat-card>
+                            <mat-icon>attach_money</mat-icon>
+                            <hr>
+                            <mat-card-content>
+                                <span class="mat-title">Estate Planning</span>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="RealEstateCard">
+                        <mat-card>
+                            <mat-icon>home</mat-icon>
+                            <hr>
+                            <mat-card-content>
+                                <span class="mat-title">Real Estate</span>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <br>
+                <div class="row responsive-service-cards">
+                    <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="right">
+                        <mat-card>
+                            <!-- TODO: maybe need better icon for this? -->
+                            <mat-icon>child_friendly</mat-icon>
+                            <hr>
+                            <mat-card-content>
+                                <span class="mat-title">Guardianships</span>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm-6" pawsAnimateOnScroll fadeFrom="left" id="BusinessCard">
+                        <mat-card>
+                            <mat-icon>business</mat-icon>
+                            <hr>
+                            <mat-card-content>
+                                <span class="mat-title">Business Affairs</span>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12" pawsAnimateOnScroll fadeFrom="right">
+                        <mat-card>
+                            <div class="mat-subheading-2" style="font-size: 16px;">
+                                For Business, Litigation and Family Law, contact
+                                <a href="http://www.csadlawyers.com/" target=_blank>
+                                    Culin, Sharp, Autry & Day
+                                    <mat-icon style="position: relative; top: 5px;">link</mat-icon>
+                                </a>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
-</mat-card>
+</div>
