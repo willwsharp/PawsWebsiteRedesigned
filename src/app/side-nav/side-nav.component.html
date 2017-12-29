@@ -7,7 +7,7 @@
             *ngFor="let nav of navigationList; let index = index;" 
             (click)="selectPanel(nav)" 
             [ngClass]="{'active-item': isActive(index)}"
-            style="text-align: left; width: 100%; font-size: 16px;"
+            class="menu-list-item"
         >
             <strong>{{nav}}</strong>
             <mat-icon 

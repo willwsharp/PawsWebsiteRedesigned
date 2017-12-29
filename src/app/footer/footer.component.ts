@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppUtil } from '../shared/services/app-util.service';
 
 @Component({
     moduleId: module.id,
@@ -8,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
         './footer.component.css'
     ]
 })
-export class FooterComponent implements OnInit {
-    constructor() { }
-
-    ngOnInit() { }
+export class FooterComponent {
+    
+    constructor(public appUtil: AppUtil) { }
 }

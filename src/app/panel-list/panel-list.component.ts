@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PanelService } from './panel.service';
+import { AppUtil } from '../shared/services/app-util.service';
 
 @Component({
     moduleId: module.id,
@@ -9,15 +10,7 @@ import { PanelService } from './panel.service';
         './panel-list.component.css'
     ]
 })
-export class PanelList implements OnInit {
-
-    ngOnInit(): void {
-    }
-    
-    constructor(private panelService: PanelService) { }
-
-    public onMobileDevice(): boolean {
-        return window.innerWidth < 767;
-    }
-
+export class PanelList{
+    constructor(private panelService: PanelService,
+                public appUtil: AppUtil) { }
 }

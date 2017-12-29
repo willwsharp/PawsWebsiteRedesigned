@@ -23,9 +23,7 @@ export class SideNavComponent {
     }
 
     public selectPanel(dest: string) {
-        setTimeout(() => {
-            this.dialogRef.close(dest);
-        }, 25);
+        this.dialogRef.close(dest);
     }
 
     public isActive(index: number) {

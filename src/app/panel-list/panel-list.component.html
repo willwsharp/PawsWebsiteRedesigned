@@ -1,6 +1,6 @@
 <!-- Intro Section -->
-<div id="home" class="panel">
-    <ng-container *ngIf="onMobileDevice(); then brandImg else heroImg"></ng-container>
+<div id="home" class="custom-panel">
+    <ng-container *ngIf="appUtil.onMobileDevice(); then brandImg else heroImg"></ng-container>
     <ng-template #heroImg>
         <div class="paws-hero-img"></div>
     </ng-template>

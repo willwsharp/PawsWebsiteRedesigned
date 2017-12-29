@@ -29,6 +29,7 @@ export class NavbarEnlargeDirective implements OnInit {
   onScroll() {
     const collapseOffset = 50;
     let currentOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // don't use singleton service because this number isn't the same as the others
     let onMobileDevice = window.innerWidth < 765;
 
     // don't do anything with the navbar if a modal is open or we're on a mobile device
