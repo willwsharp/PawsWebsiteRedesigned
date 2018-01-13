@@ -109,7 +109,7 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'Fauquier County Commisioner of Account Instructions',
-                        linkDest: 'http://www.fauquiercounty.gov/government/departments-a-g/circuit-court-clerk/wills-and-estates/commissioner-of-accounts'
+                        linkDest: 'http://www.fauquiercounty.gov/government/departments-a-g/circuit-court-clerk'
                     },
                     {
                         linkText: 'Fauquier County Circuit Court Clerk\'s Office - Wills and Estates',
@@ -153,8 +153,8 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://vgavirginia.org/'
                     },
                     {
-                        linkText: 'Virginia Office for Aging Services',
-                        linkDest: 'https://www.vda.virginia.gov/'
+                        linkText: 'Guardianship & Conservatorship In Virginia booklet',
+                        linkDest: 'http://www.vda.virginia.gov/pdfdocs/guardbook.pdf'
                     },
                     {
                         linkText: 'Guardianship & Conservatorship Proceedings Regarding Incapacitated Adults',
@@ -220,6 +220,19 @@ export class ResourcesPanelComponent implements OnInit {
                     }
                 ]
             }
+            // {
+            //     header: 'Mobile Apps',
+            //     innerContent: [
+            //         {
+            //             linkText: '"My Health Care Wishes" Lite - Apple',
+            //             linkDest: 'https://itunes.apple.com/us/app/my-health-care-wishes-lite/id853612365?mt=8'
+            //         },
+            //         {
+            //             linkText: '"My Health Care Wishes" Lite - Google Play',
+            //             linkDest: 'https://play.google.com/store/apps/details?id=com.AmericanBar.MyHeralthCareWishesLite'
+            //         }
+            //     ]
+            // }
         ]
     }
 }
