@@ -38,7 +38,7 @@ export class PawsModalService {
             {
                 header: "How do I schedule a consultation?",
                 innerContent: `
-                        Call 540-347-1482 and... TODO: need PAWS help for this (if we want this question)
+                        Call 540-347-1482 to schedule an appointment.
                         `
             },
             {
