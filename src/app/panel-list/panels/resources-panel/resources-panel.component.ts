@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { ResourceAccordion } from "./resource-accordion.model";
+import { Component, OnInit } from '@angular/core';
+import { ResourceAccordion } from './resource-accordion.model';
 
 
 @Component({
@@ -153,10 +153,6 @@ export class ResourcesPanelComponent implements OnInit {
                         linkDest: 'http://vgavirginia.org/'
                     },
                     {
-                        linkText: 'Guardianship & Conservatorship In Virginia booklet',
-                        linkDest: 'http://www.vda.virginia.gov/pdfdocs/guardbook.pdf'
-                    },
-                    {
                         linkText: 'Guardianship & Conservatorship Proceedings Regarding Incapacitated Adults',
                         linkDest: 'http://www.courts.state.va.us/courtadmin/aoc/cip/programs/gal/adult/guardian_conserv_proceedings.pdf'
                     },
@@ -220,19 +216,6 @@ export class ResourcesPanelComponent implements OnInit {
                     }
                 ]
             }
-            // {
-            //     header: 'Mobile Apps',
-            //     innerContent: [
-            //         {
-            //             linkText: '"My Health Care Wishes" Lite - Apple',
-            //             linkDest: 'https://itunes.apple.com/us/app/my-health-care-wishes-lite/id853612365?mt=8'
-            //         },
-            //         {
-            //             linkText: '"My Health Care Wishes" Lite - Google Play',
-            //             linkDest: 'https://play.google.com/store/apps/details?id=com.AmericanBar.MyHeralthCareWishesLite'
-            //         }
-            //     ]
-            // }
-        ]
+        ];
     }
 }
