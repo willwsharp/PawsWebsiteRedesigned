@@ -105,7 +105,7 @@ export class ResourcesPanelComponent implements OnInit {
                 innerContent: [
                     {
                         linkText: ' Virginia Bar Association Guide to Administration of Decedents\' Estate in Virginia',
-                        linkDest: 'http://vba.affiniscape.com/associations/11069/files/adminguide.pdf'
+                        linkDest: 'https://www.vba.org/page/guide_estates'
                     },
                     {
                         linkText: 'Fauquier County Commisioner of Account Instructions',

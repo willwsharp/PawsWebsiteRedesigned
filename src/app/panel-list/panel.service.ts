@@ -51,7 +51,7 @@ export class PanelService {
                     <li>Creation of corporations, limited liability companies, partnerships and other business matters</li>
                 </ul>
 
-                For Business, Lititgation, and Family Law contact <a href="http://www.csadlawyers.com/" target="_blank">Culin, Sharp, Autry & Day</a>
+                For Business, Litigation, and Family Law contact <a href="http://www.csadlawyers.com/" target="_blank">Culin, Sharp, Autry & Day</a>
                 `
             },
             {
