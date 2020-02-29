@@ -88,7 +88,7 @@ export class ResourcesPanelComponent implements OnInit {
                     },
                     {
                         linkText: 'Registry for Advance Medical Directives',
-                        linkDest: 'http://www.virginiaregistry.org/'
+                        linkDest: 'https://connectvirginia.org/adr/'
                     },
                     {
                         linkText: ' Aging Together\'s Senior Resources',
@@ -148,10 +148,6 @@ export class ResourcesPanelComponent implements OnInit {
             {
                 header: 'Guardianship',
                 innerContent: [
-                    {
-                        linkText: 'Virginia Guardianship Association',
-                        linkDest: 'http://vgavirginia.org/'
-                    },
                     {
                         linkText: 'Guardianship & Conservatorship Proceedings Regarding Incapacitated Adults',
                         linkDest: 'http://www.courts.state.va.us/courtadmin/aoc/cip/programs/gal/adult/guardian_conserv_proceedings.pdf'
